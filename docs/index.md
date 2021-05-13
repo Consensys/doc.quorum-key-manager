@@ -15,6 +15,7 @@ and keys for the entire Quorum stack, and supports the following vaults:
 - Azure Key Vault
 - AWS Key Management Service.
 
+![Architecture](Images/Simplified_Architecture.png)
 
 ## Why use Quorum Key Manager?
 
