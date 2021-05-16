@@ -36,7 +36,7 @@ Quorum Key Manager is compatible with GoQuorum, Hyperledger Besu, Codefi Orchest
 ### Versatility
 
 - Supports public and private Ethereum networks.
-- JSON RPC for Ethereum 1 support.
+- Supports multiple cryptographic curves.
 
 <!--links-->
 [BSL 1.1 license]: https://mariadb.com/bsl11/
