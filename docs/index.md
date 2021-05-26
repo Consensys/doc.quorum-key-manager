@@ -36,6 +36,7 @@ Quorum Key Manager is compatible with GoQuorum, Hyperledger Besu, Codefi Orchest
 ### Versatility
 
 - Supports public and private Ethereum networks.
+- Supports EdDSA and ECDSA digital signature algorithms.
 
 <!--links-->
 [BSL 1.1 license]: https://mariadb.com/bsl11/
