@@ -5,13 +5,12 @@
 
 [Quorum Key Manager] is a key management application to be used with a web3 provider.
 
-The software sources are hosted in [Quorum Key Manager] repository.
+The software sources are hosted in the Quorum Key Manager repository.
 
 This repository only contains the sources for [Quorum Key Manager documentation website hosted by ReadTheDocs.com].
 
 This repository uses a Git submodule. Please refer to the [common tools wiki] for explanation about
 how to build and contribute to this documentation.
 
-[Quorum Key Manager]: https://github.com/ConsenSys/quorum-key-manager
 [common tools wiki]: https://github.com/Consensys/doc.common/wiki
 [Quorum Key Manager documentation website hosted by ReadTheDocs.com]: https://docs.quorum-key-manager.consensys.net/

@@ -6,8 +6,4 @@ description: Install Quorum Key Manager from binary distribution
 
 ## Prerequisites
 
-TODO
-
 ## Install binaries
-
-TODO
