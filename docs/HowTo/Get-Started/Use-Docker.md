@@ -16,5 +16,3 @@ A Docker image is provided to run Quorum Key Manager in a Docker container.
         The Docker image does not run on Windows.
 
 ## Run Docker image
-
-TODO
