@@ -60,9 +60,7 @@ nav:
     - Tutorials:
         - Overview: Tutorials/Overview.md
     - Reference:
-        - Command Line:
-            - Options: Reference/CLI/CLI-Syntax.md
-            - Subcommands: Reference/CLI/CLI-Subcommands.md
+        - Command Line Options: Reference/CLI-Syntax.md
         - REST API methods: Reference/Rest.md
 
 markdown_extensions:
