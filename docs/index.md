@@ -19,7 +19,9 @@ and keys for the entire Quorum stack, and supports the following vaults:
 
 ## Why use Quorum Key Manager?
 
-Manage your user private keys from a single API while having the keys stored in a secure vault.
+Manage users private keys from a single API while having keys stored in a secure vault, or
+V3 keystores.
+
 Manage a user's access rights using authentication and authorization, and audit the access history
 and signing requests for registered keys.
 
@@ -37,6 +39,7 @@ Quorum Key Manager is compatible with GoQuorum, Hyperledger Besu, Codefi Orchest
 
 - Supports public and private Ethereum networks.
 - Supports signing transactions and [typed data].
+- Supports signing using keys
 
 <!--links-->
 [BSL 1.1 license]: https://mariadb.com/bsl11/
