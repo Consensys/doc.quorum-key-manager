@@ -23,7 +23,7 @@ The default location is `http://localhost:9000/swagger-ui`.
 You can also use tools such as [Postman] or [cURL] to interact with Quorum Key Manager APIs.
 
 <!-- Links -->
-[REST API documentation]: https://consensys.github.io/quorum-key-manager/
+[REST API documentation]: https://consensysquorum.github.io/quorum-key-manager/
 [Postman]: https://www.postman.com/
 [cURL]: https://curl.haxx.se/
 [Swagger UI]: https://swagger.io/tools/swagger-ui/

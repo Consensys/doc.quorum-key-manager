@@ -6,8 +6,6 @@ description: Building Quorum Key Manager from source code
 
 ## Prerequisites
 
-TODO
-
 ## Installation on Linux / Unix / macOS
 
 ### Clone the Quorum Key Manager Repository
