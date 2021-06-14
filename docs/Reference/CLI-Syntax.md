@@ -84,8 +84,8 @@ The default is 8080.
     ```
 
 Log formatter.
-The options are "text" and "json".
-The default is "text".
+The options are `text` and `json`.
+The default is `text`.
 
 ### `log-level`
 
@@ -108,8 +108,8 @@ The default is "text".
     ```
 
 Log level.
-The options are "debug", "error", "fatal", "info", "panic", "trace", and "warn".
-The default is "info".
+The options are `debug`, `error`, `fatal`, `info`, `panic`, `trace`, and `warn`.
+The default is `info`.
 
 ### `log-timestamp`
 
@@ -131,7 +131,7 @@ The default is "info".
     LOG_TIMESTAMP=true
     ```
 
-Enables logging with timestamp (only in "text" format).
+Enables logging with timestamp (only in `text` format).
 The default is `true`.
 
 ### `manifest-path`
