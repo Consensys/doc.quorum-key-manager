@@ -13,7 +13,7 @@ Specify the path to the manifest file using the `--manifest-path` option on key 
 
 A store manifest contains the following fields to configure a store:
 
-- `kind`: *string* - type of store (for example, `AzureKeys` or `HashicorpSecrets`)
+- `kind`: *string* - type of store (for example, `AzureKeys` or `HashiCorpSecrets`)
 - `version`: *string* - store version
 - `name`: *string* - name of the store for later reference
 - `specs`: *object* - configuration object to connect to an underlying secure system storage
@@ -33,7 +33,7 @@ You can define multiple manifests in one manifest file, each separated by a dash
 
     ```yaml
     // Hashicorp secret store manifest
-    - kind: HashicorpSecrets
+    - kind: HashiCorpSecrets
       version: 0.0.1
       name: hashicorp-secrets
       specs:
