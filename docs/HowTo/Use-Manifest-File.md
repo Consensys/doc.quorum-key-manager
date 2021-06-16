@@ -13,7 +13,7 @@ Specify the path to the manifest file using the `--manifest-path` option on key 
 
 A store manifest contains the following fields to configure a store:
 
-- `kind`: *string* - type of store (for example, AzureKeys or HashicorpSecrets)
+- `kind`: *string* - type of store (for example, `AzureKeys` or `HashicorpSecrets`)
 - `version`: *string* - store version
 - `name`: *string* - name of the store for later reference
 - `specs`: *object* - configuration object to connect to an underlying secure system storage
@@ -21,13 +21,13 @@ A store manifest contains the following fields to configure a store:
 
 A node manifest contains the following fields to configure a node:
 
-- `kind`: *string* - "Node"
+- `kind`: *string* - the string `Node`
 - `version`: *string* - node version
 - `name`: *string* - name of the node for later reference
 - `specs`: *object* - configuration object to connect to various endpoints
 - `tags`: *map* of *strings* to *strings* - (optional) user set information about the node
 
-You can define multiple manifests in one manifest file, separated by `-`.
+You can define multiple manifests in one manifest file, each separated by a dash (`-`).
 
 !!! example "Sample Quorum Key Manager manifest file"
 
