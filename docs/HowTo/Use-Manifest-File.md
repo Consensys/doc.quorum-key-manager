@@ -11,61 +11,81 @@ Specify the path to the manifest file using the `--manifest-path` option on key 
 
 ## YAML specification
 
+### Store manifest
+
 A store manifest contains the following fields to configure a store:
 
 - `kind`: *string* - type of store (`AwsKeys`, `AwsSecrets`, `AzureKeys`, `AzureSecrets`, `Eth1Account`, `HashicorpKeys`,
   or `HashicorpSecrets`)
 - `version`: *string* - store version
 - `name`: *string* - name of the store for later reference
-- `specs`: *object* - configuration object to connect to an underlying secure system storage
+- `specs`: *object* - configuration object to connect to an underlying secure system storage, with the following fields:
+    - `mountPoint`: *string* - name of the store's mount point
+    - `address`: *string* - address of the store
+    - `token`: *string* - user's access token for the store
+    - `namespace`: *string* - store namespace
+
+    !!! note
+
+        If using an `Eth1Account` store, specify any valid `keystore` (`AwsKeys`, `AzureKeys`, or `HashicorpKeys`) under
+        `specs`, and provide the `specs` fields for that key store, as shown in the [example](#sample-manifest-file).
+
 - `tags`: *map* of *strings* to *strings* - (optional) user set information about the store
+
+### Node manifest
 
 A node manifest contains the following fields to configure a node:
 
 - `kind`: *string* - the string `Node`
 - `version`: *string* - node version
 - `name`: *string* - name of the node for later reference
-- `specs`: *object* - configuration object to connect to various endpoints
+- `specs`: *object* - configuration object to connect to various endpoints, with the following fields for each endpoint:
+    - `rpc` or `tessera`: (field name is the name of the endpoint)
+        - `addr`: *string* - address of the endpoint
 - `tags`: *map* of *strings* to *strings* - (optional) user set information about the node
 
+### Sample manifest file
+
 You can define multiple manifests in one manifest file, each separated by a dash (`-`).
+
+The following example shows a manifest file containing secret store, key store, Eth1 account store, and node manifests.
 
 !!! example "Sample Quorum Key Manager manifest file"
 
     ```yaml
-    // Hashicorp secret store manifest
+    # Hashicorp secret store manifest
     - kind: HashicorpSecrets
       version: 0.0.1
       name: hashicorp-secrets
       specs:
         mountPoint: secret
         address: http://hashicorp:8200
-        token: {{YOUR_TOKEN}}
-        namespace: ''{{user1_space}}"
+        token: YOUR_TOKEN
+        namespace: user1_space
 
-    // Hashicorp key store manifest
+    # Hashicorp key store manifest
     - kind: HashicorpKeys
       version: 0.0.1
       name: hashicorp-keys
       specs:
         mountPoint: orchestrate
         address: http://hashicorp:8200
-        token: {{YOUR_TOKEN}}
-        namespace: ''{{user1_space}}"
+        token: YOUR_TOKEN
+        namespace: user1_space
 
-    // Eth1 account key store manifest
+    # Eth1 account store manifest
     - kind: Eth1Account
       version: 0.0.1
       name: eth1-accounts
       specs:
-      keystore: HashicorpKeys
-      specs:
-        mountPoint: orchestrate
-        address: http://hashicorp:8200
-        token: {{YOUR_TOKEN}}
-        namespace: ''
+        keystore: HashicorpKeys
+        specs:
+          mountPoint: orchestrate
+          address: http://hashicorp:8200
+          token: YOUR_TOKEN
+          namespace: user1_space
 
-    // GoQuorum node manifest
+    # GoQuorum node manifest
     - kind: Node
       version: 0.0.0
       name: goquorum-node
@@ -75,7 +95,7 @@ You can define multiple manifests in one manifest file, each separated by a dash
         tessera:
           addr: http://tessera1:9080
 
-    // Besu node manifest
+    # Besu node manifest
     - kind: Node
       version: 0.0.0
       name: besu-node
