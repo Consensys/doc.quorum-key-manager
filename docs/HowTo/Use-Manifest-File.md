@@ -13,7 +13,8 @@ Specify the path to the manifest file using the `--manifest-path` option on key 
 
 A store manifest contains the following fields to configure a store:
 
-- `kind`: *string* - type of store (for example, `AzureKeys` or `HashiCorpSecrets`)
+- `kind`: *string* - type of store (`AwsKeys`, `AwsSecrets`, `AzureKeys`, `AzureSecrets`, `Eth1Account`, `HashicorpKeys`,
+  or `HashicorpSecrets`)
 - `version`: *string* - store version
 - `name`: *string* - name of the store for later reference
 - `specs`: *object* - configuration object to connect to an underlying secure system storage
@@ -33,14 +34,14 @@ You can define multiple manifests in one manifest file, each separated by a dash
 
     ```yaml
     // Hashicorp secret store manifest
-    - kind: HashiCorpSecrets
+    - kind: HashicorpSecrets
       version: 0.0.1
       name: hashicorp-secrets
       specs:
         mountPoint: secret
         address: http://hashicorp:8200
-        tokenPath: /vault/token/.root
-        namespace: ''
+        token: {{YOUR_TOKEN}}
+        namespace: ''{{user1_space}}"
 
     // Hashicorp key store manifest
     - kind: HashicorpKeys
@@ -49,7 +50,19 @@ You can define multiple manifests in one manifest file, each separated by a dash
       specs:
         mountPoint: orchestrate
         address: http://hashicorp:8200
-        tokenPath: /vault/token/.root
+        token: {{YOUR_TOKEN}}
+        namespace: ''{{user1_space}}"
+
+    // Eth1 account key store manifest
+    - kind: Eth1Account
+      version: 0.0.1
+      name: eth1-accounts
+      specs:
+      keystore: HashicorpKeys
+      specs:
+        mountPoint: orchestrate
+        address: http://hashicorp:8200
+        token: {{YOUR_TOKEN}}
         namespace: ''
 
     // GoQuorum node manifest
