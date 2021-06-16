@@ -8,6 +8,10 @@ This reference describes the syntax of the Quorum Key Manager Command Line Inter
 
 ## Options
 
+To start the Quorum Key Manager run:
+
+`quorum-kms run [OPTIONS]`
+
 ### `help`
 
 === "Syntax"
