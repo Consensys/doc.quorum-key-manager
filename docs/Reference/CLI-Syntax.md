@@ -10,7 +10,7 @@ This reference describes the syntax of the Quorum Key Manager Command Line Inter
 
 To start the Quorum Key Manager run:
 
-```
+```bash
 quorum-kms run [OPTIONS]
 ```
 
