@@ -8,13 +8,15 @@ This reference describes the syntax of the Quorum Key Manager Command Line Inter
 
 ## Options
 
-To start the Quorum Key Manager run:
+You can specify Quorum Key Manager options:
 
-```bash
-quorum-kms run [OPTIONS]
-```
+- On the command line.
 
-You may also specify Quorum Key Manager options as environment variables instead of on the command line.
+  ```bash
+  quorum-kms run [OPTIONS]
+  ```
+
+- As environment variables.
 
 ### `health-port`
 
