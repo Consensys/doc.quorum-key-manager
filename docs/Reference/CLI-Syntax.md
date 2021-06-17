@@ -14,6 +14,31 @@ To start the Quorum Key Manager run:
 quorum-kms run [OPTIONS]
 ```
 
+You may also specify Quorum Key Manager options as environment variables instead of on the command line.
+
+### `health-port`
+
+=== "Syntax"
+
+    ```bash
+    --health-port=<PORT>
+    ```
+
+=== "Command Line"
+
+    ```bash
+    --health-port=6174
+    ```
+
+=== "Environment Variable"
+
+    ```bash
+    HEALTH_PORT="6174"
+    ```
+
+Port to expose Health HTTP service.
+The default is 8081.
+
 ### `help`
 
 === "Syntax"
