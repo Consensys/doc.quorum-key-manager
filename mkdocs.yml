@@ -58,7 +58,6 @@ nav:
     - Concepts:
         - Architecture: Concepts/ArchitectureOverview.md
     - Tutorials:
-        - Overview: Tutorials/Overview.md
     - Reference:
         - Command Line Options: Reference/CLI-Syntax.md
         - REST API methods: Reference/Rest.md

@@ -1,4 +1,8 @@
-## Sign Ethereum Transaction
+---
+description: Signing an Ethereum transaction tutorial
+---
+
+# Sign Ethereum Transaction
 
 In this section we are going to explain how to create an ethereum account and sign transaction.
 
