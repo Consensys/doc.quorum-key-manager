@@ -30,7 +30,7 @@ cd quorum-key-manager
 Install the project vendors:
 
 ```bash
-go mod vendor
+go mod download
 ```
 
 Compile the binary:
