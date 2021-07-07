@@ -49,10 +49,10 @@ theme:
   logo: 'Images/logo.svg'
   favicon: 'Images/favicon.svg'
 nav:
+    - Get started:
+        - Run Quorum Key Manager from Docker image: Get-Started/Use-Docker.md
+        - Build from source: Get-Started/Build-From-Source.md
     - How to:
-        - Get started with Quorum Key Manager:
-            - Run Quorum Key Manager from Docker image: HowTo/Get-Started/Use-Docker.md
-            - Build from source: HowTo/Get-Started/Build-From-Source.md
     - Concepts:
         - Architecture: Concepts/ArchitectureOverview.md
     - Tutorials:
