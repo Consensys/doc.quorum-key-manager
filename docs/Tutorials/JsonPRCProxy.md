@@ -9,8 +9,11 @@ You can connect to the JSON-RPC proxy using a Quorum Key Manager remote keystore
 ## Prerequisites
 
 - Quorum Key Manager installed
+- [`curl` command line](https://curl.se/download.html)
 
-Firstly we need to specify in our setting of Quorum Key Manager(QKM) that we want to create an `Eth1Account` Store to allocate our keys
+## Steps
+
+1. Specify in the  that we want to create an `Eth1Account` Store to allocate our keys
 and the rpc node we want to connect to. For that we will need to create a manifest file with the following content:
 
 ```yaml
