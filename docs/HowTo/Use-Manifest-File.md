@@ -32,10 +32,10 @@ A store manifest contains the following fields to configure a store:
         - `clientSecret`: *string* - user client secret
     - If using a `HashicorpKeys` or `HashicorpSecrets` store:
         - `mountPoint`: *string* - secret engine mounting point
-        - `address`: *string* - Hashicorp server URL
+        - `address`: *string* - HashiCorp server URL
         - `tokenPath`: *string* - path to token file
         - `token`: *string* - authorization token
-        - `namespace`: *string* - default namespace to store data in Hashicorp
+        - `namespace`: *string* - default namespace to store data in HashiCorp
 
     !!! note
 
