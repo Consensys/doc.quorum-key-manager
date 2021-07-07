@@ -52,7 +52,6 @@ nav:
     - Get started:
         - Run Quorum Key Manager from Docker image: Get-Started/Use-Docker.md
         - Build from source: Get-Started/Build-From-Source.md
-    - How to:
     - Concepts:
         - Architecture: Concepts/ArchitectureOverview.md
     - Tutorials:
