@@ -7,7 +7,7 @@ description: Using a manifest file
 Use a YAML manifest file to specify Quorum Key Manager manifests.
 Manifests represent the configuration of runtime components of the key manager, such as stores and nodes.
 
-Specify the path to the manifest file using the `--manifest-path` option on key manager startup.
+Specify the path to the manifest file using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option on key manager startup.
 
 ## YAML specification
 
