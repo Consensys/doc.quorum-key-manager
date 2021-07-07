@@ -8,11 +8,17 @@ A Docker image is provided to run Quorum Key Manager in a Docker container.
 
 ## Prerequisites
 
-* [Docker](https://docs.docker.com/install/)
+- [Docker](https://docs.docker.com/install/)
+- MacOS or Linux
 
-* MacOS or Linux
+    !!! Important
 
-    !!! important
         The Docker image does not run on Windows.
 
 ## Run Docker image
+
+Run Quorum Key Manager on Docker with the following command:
+
+```bash
+docker run -it --name quorum-key-manager -v type=bind,source="$(pwd)"/deps/config,target=/manifests docker.consensys.net/pub/quorum-key-manager:latest run --manifest-path=/manifests
+```
