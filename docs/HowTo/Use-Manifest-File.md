@@ -20,10 +20,22 @@ A store manifest contains the following fields to configure a store:
 - `version`: *string* - store version
 - `name`: *string* - name of the store for later reference
 - `specs`: *object* - configuration object to connect to an underlying secure system storage, with the following fields:
-    - `mountPoint`: *string* - name of the store's mount point
-    - `address`: *string* - address of the store
-    - `token`: *string* - user's access token for the store
-    - `namespace`: *string* - store namespace
+    - If using an `AwsKeys` or `AwsSecrets` store:
+        - `accessID`: *string* - AWS access ID
+        - `secretKey`: *string* - AWS secret key
+        - `region`: *string* - AWS region
+        - `debug`: *boolean* - indicates whether to enable debugging
+    - If using an `AzureKeys` or `AzureSecrets` store:
+        - `vaultName`: *string* - connected AKV key vault ID
+        - `tenantID`: *string* - Azure Active Directory tenant ID
+        - `clientID`: *string* - user client ID
+        - `clientSecret`: *string* - user client secret
+    - If using a `HashicorpKeys` or `HashicorpSecrets` store:
+        - `mountPoint`: *string* - secret engine mounting point
+        - `address`: *string* - Hashicorp server URL
+        - `tokenPath`: *string* - path to token file
+        - `token`: *string* - authorization token
+        - `namespace`: *string* - default namespace to store data in Hashicorp
 
     !!! note
 
@@ -60,6 +72,7 @@ The following example shows a manifest file containing secret store, key store, 
       specs:
         mountPoint: secret
         address: http://hashicorp:8200
+        tokenPath: path/to/token_file
         token: YOUR_TOKEN
         namespace: user1_space
 
@@ -70,6 +83,7 @@ The following example shows a manifest file containing secret store, key store, 
       specs:
         mountPoint: orchestrate
         address: http://hashicorp:8200
+        tokenPath: path/to/token_file
         token: YOUR_TOKEN
         namespace: user1_space
 
