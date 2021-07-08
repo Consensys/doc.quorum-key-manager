@@ -61,7 +61,7 @@ This tutorial walks you through signing an Ethereum transaction using Quorum Key
         }
         ```
 
-3. Sign a transaction using the Ethereum account:
+4. Sign a transaction using the Ethereum account:
 
     === "curl HTTP request"
 

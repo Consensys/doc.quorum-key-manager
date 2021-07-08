@@ -69,7 +69,7 @@ This tutorial walks you through connecting to the JSON-RPC node proxy and signin
         }
         ```
 
-3. Sign a transaction using the Ethereum account and the RPC node proxy:
+4. Sign a transaction using the Ethereum account and the RPC node proxy:
 
     === "curl HTTP request"
 
