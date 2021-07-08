@@ -4,8 +4,7 @@ description: Using a manifest file
 
 # Using the Quorum Key Manager manifest file
 
-Use a YAML manifest file to specify Quorum Key Manager manifests.
-Manifests represent the configuration of runtime components of the key manager, such as stores and nodes.
+Use a YAML manifest file to specify the Quorum Key Manager runtime components, such as stores and nodes.
 
 Specify the path to the manifest file using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option on key manager startup.
 
@@ -13,12 +12,12 @@ Specify the path to the manifest file using the [`--manifest-path`](../Reference
 
 ### Store manifest
 
-A store manifest contains the following fields to configure a store:
+Use the following fields to configure one or more stores:
 
 - `kind`: *string* - type of store (`AwsKeys`, `AwsSecrets`, `AzureKeys`, `AzureSecrets`, `Eth1Account`, `HashicorpKeys`,
   or `HashicorpSecrets`)
 - `version`: *string* - store version
-- `name`: *string* - name of the store for later reference
+- `name`: *string* - name of the store
 - `specs`: *object* - configuration object to connect to an underlying secure system storage, with the following fields:
     - If using an `AwsKeys` or `AwsSecrets` store:
         - `accessID`: *string* - AWS access ID
@@ -26,7 +25,7 @@ A store manifest contains the following fields to configure a store:
         - `region`: *string* - AWS region
         - `debug`: *boolean* - indicates whether to enable debugging
     - If using an `AzureKeys` or `AzureSecrets` store:
-        - `vaultName`: *string* - connected AKV key vault ID
+        - `vaultName`: *string* - connected Azure key vault ID
         - `tenantID`: *string* - Azure Active Directory tenant ID
         - `clientID`: *string* - user client ID
         - `clientSecret`: *string* - user client secret
@@ -46,11 +45,11 @@ A store manifest contains the following fields to configure a store:
 
 ### Node manifest
 
-A node manifest contains the following fields to configure a node:
+Use the following fields to configure one or more nodes:
 
 - `kind`: *string* - the string `Node`
 - `version`: *string* - node version
-- `name`: *string* - name of the node for later reference
+- `name`: *string* - name of the node
 - `specs`: *object* - configuration object to connect to various endpoints, with the following fields for each endpoint:
     - `rpc` or `tessera`: (field name is the name of the endpoint)
         - `addr`: *string* - address of the endpoint
