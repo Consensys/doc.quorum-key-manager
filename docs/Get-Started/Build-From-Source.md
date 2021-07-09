@@ -44,3 +44,13 @@ Display help information and confirm installation:
 ```bash
 ./build/bin/key-manager run --help
 ```
+
+### Start Quorum Key Manager
+
+Start Quorum Key Manager specifying the path to a [manifest file](../HowTo/Use-Manifest-File.md) and any other options:
+
+```bash
+./build/bin/key-manager run --manifest-path=<PATH> [OPTIONS]
+```
+
+See the [full list of options](../Reference/CLI-Syntax.md).
