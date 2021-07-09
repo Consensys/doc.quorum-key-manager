@@ -8,14 +8,14 @@ This tutorial walks you through signing an Ethereum transaction using Quorum Key
 
 ## Prerequisites
 
-- Quorum Key Manager installed
+- [Quorum Key Manager installed](../Get-Started/Build-From-Source.md)
 - [`curl` command line](https://curl.se/download.html)
-- A [HashiCorp Vault](https://www.hashicorp.com/products/vault) configured
+- [HashiCorp Vault](https://www.hashicorp.com/products/vault) configured
 
 ## Steps
 
 1. In the Quorum Key Manager [manifest file], specify an `Eth1Account` store to allocate your HashiCorp keys.
-   Use the following template, filling in the `specs` for `HashicorpKeys` with [information about your HashiCorp Vault]:
+   Configure `HashicorpKeys` by filling in the `specs` with [information about your HashiCorp Vault](../HowTo/Use-Manifest-File.md):
 
     ```yaml
     kind: Eth1Account
@@ -30,7 +30,7 @@ This tutorial walks you through signing an Ethereum transaction using Quorum Key
         namespace: <SELECTED-NAMESPACE>
     ```
 
-2. Run Quorum Key Manager with the manifest file loaded, using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option:
+2. Start Quorum Key Manager with the manifest file by using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option:
 
     ```bash
     quorum-kms run --manifest-path=<PATH-TO-MANIFEST-FILE>

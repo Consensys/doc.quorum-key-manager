@@ -8,15 +8,15 @@ This tutorial walks you through connecting to the JSON-RPC node proxy and signin
 
 ## Prerequisites
 
-- Quorum Key Manager installed
+- [Quorum Key Manager installed](../Get-Started/Build-From-Source.md)
 - [`curl` command line](https://curl.se/download.html)
-- An [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/) configured
+- [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/) configured
 
 ## Steps
 
-1. In the Quorum Key Manager [manifest file], specify an `Eth1Account` store to allocate your Azure keys, and specify the
-   RPC node to connect to.
-   Use the following template, filling in the `specs` for `AzureKeys` with [information about your Azure Key Vault]:
+1. In the Quorum Key Manager [manifest file], specify an `Eth1Account` store to allocate your Azure keys, and the RPC
+   node to connect to.
+   Configure `AzureKeys` by filling in the `specs` with [information about your Azure Key Vault](../HowTo/Use-Manifest-File.md):
 
     ```yaml
     - kind: Eth1Account
@@ -40,7 +40,7 @@ This tutorial walks you through connecting to the JSON-RPC node proxy and signin
           addr: http://tessera1:9080
     ```
 
-2. Run Quorum Key Manager with the manifest file loaded, using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option:
+2. Start Quorum Key Manager with the manifest file by using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option:
 
     ```bash
     quorum-kms run --manifest-path=<PATH-TO-MANIFEST-FILE>
