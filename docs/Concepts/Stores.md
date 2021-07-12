@@ -7,7 +7,7 @@ description: Description of stores
 ## Stores
 
 A store is a Quorum Key Manager (QKM) component that interfaces with an underlying secure system storage (such as HashiCorp
-Vault, Azure Key Vault, and AWS KMS) to perform crypto-operations.
+Vault, Azure Key Vault, or AWS KMS) to perform crypto-operations.
 
 You can configure a store using a [store manifest](../HowTo/Use-Manifest-File.md#store-manifest).
 
