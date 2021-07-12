@@ -4,7 +4,7 @@ description: Using a manifest file
 
 # Using the Quorum Key Manager manifest file
 
-Use a YAML manifest file to specify the Quorum Key Manager runtime components, such as stores and nodes.
+Use a YAML manifest file to specify the Quorum Key Manager runtime components, such as stores and [nodes](../Concepts/Nodes.md).
 
 Specify the path to the manifest file using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option on key manager startup.
 
@@ -45,7 +45,7 @@ Use the following fields to configure one or more stores:
 
 ### Node manifest
 
-Use the following fields to configure one or more nodes:
+Use the following fields to configure one or more [nodes](../Concepts/Nodes.md):
 
 - `kind`: *string* - the string `Node`
 - `version`: *string* - node version
