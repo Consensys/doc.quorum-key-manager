@@ -14,7 +14,7 @@ This tutorial walks you through connecting to the JSON-RPC node proxy and signin
 
 ## Steps
 
-1. In the Quorum Key Manager [manifest file], specify an `Eth1Account` store to allocate your Azure keys, and the RPC
+1. In the Quorum Key Manager [manifest file](../HowTo/Use-Manifest-File.md), specify an `Eth1Account` store to allocate your Azure keys, and the RPC
    node to connect to.
    Configure `AzureKeys` by filling in the `specs` with [information about your Azure Key Vault](../HowTo/Use-Manifest-File.md):
 
@@ -82,3 +82,5 @@ This tutorial walks you through connecting to the JSON-RPC node proxy and signin
         ```json
         {"jsonrpc":"2.0","result":"0x8c961ba2c3f51f9088e1a12a81bb1ad9c551ccfad75615f39e4fc95c3bb7086b","error":null,"id":1}
         ```
+
+    You can use [several JSON-RPC methods](../Concepts/Nodes.md) when connected to the node proxy.
