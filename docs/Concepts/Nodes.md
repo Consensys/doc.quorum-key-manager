@@ -9,7 +9,7 @@ A node is a Quorum Key Manager (QKM) component that interfaces with underlying n
 You can configure a node using a [node manifest](../HowTo/Use-Manifest-File.md#node-manifest).
 Specify an RPC node endpoint to [connect to the JSON-RPC node proxy](../Tutorials/JsonRPCProxy.md).
 
-When connected to the JSON-RPC node proxy, QKM intercepts the following methods for performing remote Ethereum operations:
+When connected to the JSON-RPC node proxy, QKM intercepts the following methods for performing remote transaction signing:
 
 - [`eea_sendTransaction`](https://entethalliance.github.io/client-spec/spec.html#sec-eea-sendTransaction)
 - [`eth_accounts`](https://eth.wiki/json-rpc/API)
