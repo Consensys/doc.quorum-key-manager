@@ -55,10 +55,8 @@ alias quorum-kms="<PATH-TO-QUORUM-KEY-MANAGER>/build/bin/key-manager"
 
 ### Start Quorum Key Manager
 
-Start Quorum Key Manager specifying the path to a [manifest file](../HowTo/Use-Manifest-File.md) and any other options:
+Start Quorum Key Manager specifying the path to a [manifest file](../HowTo/Use-Manifest-File.md) and any other [options](../Reference/CLI-Syntax.md):
 
 ```bash
 quorum-kms run --manifest-path=<PATH> [OPTIONS]
 ```
-
-See the [full list of options](../Reference/CLI-Syntax.md).
