@@ -14,7 +14,7 @@ This tutorial walks you through signing an Ethereum transaction using Quorum Key
 
 ## Steps
 
-1. In the Quorum Key Manager [manifest file], specify an `Eth1Account` store to allocate your HashiCorp keys.
+1. In the Quorum Key Manager [manifest file](../HowTo/Use-Manifest-File.md), specify an `Eth1Account` store to allocate your HashiCorp keys.
    Configure `HashicorpKeys` by filling in the `specs` with [information about your HashiCorp Vault](../HowTo/Use-Manifest-File.md):
 
     ```yaml
