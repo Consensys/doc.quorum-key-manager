@@ -38,10 +38,10 @@ Depending on the implementation, a key store:
 - Can manage multiple versions of a key.
 - Has advanced capabilities to delete and recover keys.
 
-You can implement a key store:
+You can implement a key store to:
 
-- Connecting and delegating crypto-operations to an external dependency.
-- Using an underlying secret store and performing crypto-operations locally.
+- Delegate crypto-operations to an external dependency.
+- Use the underlying secret store to perform crypto-operations locally.
 
 The [`/keys`](https://consensys.github.io/quorum-key-manager/#tag/Keys) REST API endpoint can be used to interact with a key store.
 
