@@ -55,7 +55,8 @@ nav:
     - How to:
         - Use a manifest file: HowTo/Use-Manifest-File.md
     - Concepts:
-        - Architecture: Concepts/ArchitectureOverview.md
+        - Architecture Overview: Concepts/ArchitectureOverview.md
+        - Stores: Concepts/Stores.md
     - Tutorials:
         - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
         - Sign an Ethereum transaction: Tutorials/SignEthereumTransaction.md
