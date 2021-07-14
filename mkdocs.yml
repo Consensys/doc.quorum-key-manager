@@ -56,6 +56,7 @@ nav:
         - Use a manifest file: HowTo/Use-Manifest-File.md
     - Concepts:
         - Architecture: Concepts/ArchitectureOverview.md
+        - Stores: Concepts/Stores.md
         - Nodes: Concepts/Nodes.md
     - Tutorials:
         - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md

@@ -4,7 +4,7 @@ description: Using a manifest file
 
 # Using the Quorum Key Manager manifest file
 
-Use a YAML manifest file to specify the Quorum Key Manager runtime components, such as stores and [nodes](../Concepts/Nodes.md).
+Use a YAML manifest file to specify the Quorum Key Manager runtime components, such as [stores](../Concepts/Stores.md) and [nodes](../Concepts/Nodes.md).
 
 Specify the path to the manifest file using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option on key manager startup.
 
@@ -12,7 +12,7 @@ Specify the path to the manifest file using the [`--manifest-path`](../Reference
 
 ### Store manifest
 
-Use the following fields to configure one or more stores:
+Use the following fields to configure one or more [stores](../Concepts/Stores.md):
 
 - `kind`: *string* - type of store (`AwsKeys`, `AwsSecrets`, `AzureKeys`, `AzureSecrets`, `Eth1Account`, `HashicorpKeys`,
   or `HashicorpSecrets`)
