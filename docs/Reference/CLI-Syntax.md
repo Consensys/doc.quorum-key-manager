@@ -13,7 +13,7 @@ You can specify Quorum Key Manager options:
 - On the command line.
 
   ```bash
-  quorum-kms run [OPTIONS]
+  key-manager run [OPTIONS]
   ```
 
 - As environment variables.
