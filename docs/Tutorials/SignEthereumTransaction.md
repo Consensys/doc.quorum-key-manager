@@ -33,7 +33,7 @@ This tutorial walks you through signing an Ethereum transaction using Quorum Key
 2. Start Quorum Key Manager with the manifest file by using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option:
 
     ```bash
-    quorum-kms run --manifest-path=<PATH-TO-MANIFEST-FILE>
+    key-manager run --manifest-path=<PATH-TO-MANIFEST-FILE>
     ```
 
 3. Create an Ethereum account:

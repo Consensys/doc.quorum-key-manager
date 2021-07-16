@@ -50,7 +50,7 @@ Display help information and confirm installation:
 You can optionally create an alias:
 
 ```bash
-alias quorum-kms="<PATH-TO-QUORUM-KEY-MANAGER>/build/bin/key-manager"
+alias key-manager="<PATH-TO-QUORUM-KEY-MANAGER>/build/bin/key-manager"
 ```
 
 ### Start Quorum Key Manager
@@ -58,5 +58,5 @@ alias quorum-kms="<PATH-TO-QUORUM-KEY-MANAGER>/build/bin/key-manager"
 Start Quorum Key Manager specifying the path to a [manifest file](../HowTo/Use-Manifest-File.md) and any other [options](../Reference/CLI-Syntax.md):
 
 ```bash
-quorum-kms run --manifest-path=<PATH> [OPTIONS]
+key-manager run --manifest-path=<PATH> [OPTIONS]
 ```

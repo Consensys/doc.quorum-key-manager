@@ -120,5 +120,5 @@ The following example shows a manifest file containing secret store, key store, 
 !!! example "Starting Quorum Key Manager with a manifest file"
 
     ```bash
-    quorum-kms run --manifest-path=/config/manifest.yml
+    key-manager run --manifest-path=/config/manifest.yml
     ```
