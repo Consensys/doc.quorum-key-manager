@@ -54,10 +54,16 @@ nav:
         - Build from source: Get-Started/Build-From-Source.md
     - How to:
         - Use a manifest file: HowTo/Use-Manifest-File.md
+        - Authenticate requests:
+            - With JSON web tokens: HowTo/Authenticate/JWT.md
+            - With TLS: HowTo/Authenticate/TLS.md
+            - With API keys: HowTo/Authenticate/API-Key.md
     - Concepts:
         - Architecture: Concepts/ArchitectureOverview.md
         - Stores: Concepts/Stores.md
         - Nodes: Concepts/Nodes.md
+        - Authentication: Concepts/Authentication.md
+        - Authorization: Concepts/Authorization.md
     - Tutorials:
         - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
         - Sign an Ethereum transaction: Tutorials/SignEthereumTransaction.md
