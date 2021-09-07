@@ -6,7 +6,16 @@ description: How to authenticate QKM using an API key.
 
 You can [authenticate](../../Concepts/Auth.md#authentication) incoming Quorum Key Manager (QKM) requests using API keys.
 
-Provide an API key file, which is a CSV file with four columns:
+Specify an API key file with the [`--auth-api-key-file`](../../Reference/CLI-Syntax.md#auth-api-key-file) command line option
+when starting QKM.
+
+!!! example "Starting Quorum Key Manager with API key authentication"
+
+    ```bash
+    key-manager run --auth-api-key-file=api_key_file.csv --manifest-path=/config/default.yml
+    ```
+
+The API key file is a CSV file with four columns:
 
 - sha256(api-key)
 - username
@@ -39,12 +48,3 @@ scheme with a blank username and the API key as the password:
 
 If a user passes an API key that is in the CSV file, user information from the corresponding line in the CSV file is
 attached to the request.
-
-Configure API keys when starting QKM by specifying the CSV file with the
-[`--auth-api-key-file`](../../Reference/CLI-Syntax.md#auth-api-key-file) command line option.
-
-!!! example "Starting Quorum Key Manager with API key authentication"
-
-    ```bash
-    key-manager run --auth-api-key-file=api_key_file.csv --manifest-path=/config/default.yml
-    ```

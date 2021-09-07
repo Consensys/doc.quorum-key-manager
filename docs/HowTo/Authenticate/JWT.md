@@ -16,7 +16,7 @@ Refer to the [OIDC documentation](https://openid.net/specs/openid-connect-core-1
 You can set the following options at QKM runtime to configure OIDC authentication.
 
 - [`--auth-oidc-issuer-url`](../../Reference/CLI-Syntax.md#auth-oidc-issuer-url) - URL of the OpenID Connect server.
-- [`--auth-oidc-ca-cert`](../../Reference/CLI-Syntax.md#auth-oidc-ca-cert) - Path to the certificate authority key for the OpenID server.
+- [`--auth-oidc-ca-cert`](../../Reference/CLI-Syntax.md#auth-oidc-ca-cert) - Path to the certificate authority (CA) key for the OpenID server.
 - [`--auth-oidc-claim-username`](../../Reference/CLI-Syntax.md#auth-oidc-claim-username) - Claim from which to extract the username.
 - [`--auth-oidc-claim-permissions`](../../Reference/CLI-Syntax.md#auth-oidc-claim-permissions) - Claim from which to extract permissions.
 - [`--auth-oidc-claim-roles`](../../Reference/CLI-Syntax.md#auth-oidc-claim-roles) - Claim from which to extract roles.

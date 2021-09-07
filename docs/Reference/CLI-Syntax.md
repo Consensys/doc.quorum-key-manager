@@ -58,7 +58,8 @@ When using [API key authentication](../HowTo/Authenticate/API-Key.md), path to t
     ```bash
     AUTH_OIDC_CA_CERT="ca.key"
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), path to the certificate authority key for the OpenID server.
+When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), path to the certificate authority (CA) key for
+the OpenID server.
 This option must be used with [--auth-oidc-issuer-url](#auth-oidc-issuer-url).
 
 ### `auth-oidc-claim-permissions`
@@ -148,6 +149,28 @@ The default is the standard claim `sub`.
 
 When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), URL of the OpenID Connect server.
 This option must be used with [--auth-oidc-ca-cert](#auth-oidc-ca-cert).
+
+### `auth-tls-ca`
+
+=== "Syntax"
+
+    ```bash
+    --auth-tls-ca=<FILE>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-tls-ca=ca.crt
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_TLS_CA="ca.crt"
+
+When using [TLS authentication](../HowTo/Authenticate/TLS.md), path to the certificate authority (CA) certificate for
+the TLS server.
 
 ### `health-port`
 

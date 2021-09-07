@@ -2,7 +2,7 @@
 description: Authentication concept page
 ---
 
-# Quorum Key Manager Authentication and Authorization
+# Quorum Key Manager authentication and authorization
 
 ## Authentication
 
