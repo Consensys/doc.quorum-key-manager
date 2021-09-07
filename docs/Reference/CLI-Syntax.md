@@ -18,6 +18,137 @@ You can specify Quorum Key Manager options:
 
 - As environment variables.
 
+### `auth-api-key-file`
+
+=== "Syntax"
+
+    ```bash
+    --auth-api-key-file=<FILE>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-api-key-file=api_key_file.csv
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_API_KEY_FILE="api_key_file.csv"
+
+When using [API key authentication](../HowTo/Authenticate/API-Key.md), path to the API key CSV file.
+
+### `auth-oidc-ca-cert`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-ca-cert=<FILE>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-ca-cert=ca.key
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_CA_CERT="ca.key"
+
+When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), path to the certificate authority key for the OpenID server.
+This option must be used with [--auth-oidc-issuer-url](#auth-oidc-issuer-url).
+
+### `auth-oidc-claim-permissions`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-claim-permissions=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-claim-permissions="scope"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_CLAIM_PERMISSIONS="scope"
+
+When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), claim from which to extract [permissions](RBAC-Permissions.md).
+The default is the standard scope `scope`.
+
+### `auth-oidc-claim-roles`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-claim-roles=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-claim-roles="qkm.roles"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_CLAIM_ROLES="qkm.roles"
+
+When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), claim from which to extract roles.
+The default is `qkm.roles`.
+
+### `auth-oidc-claim-username`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-claim-username=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-claim-username="sub"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_CLAIM_USERNAME="sub"
+
+When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), claim from which to extract the username.
+The default is the standard claim `sub`.
+
+### `auth-oidc-issuer-url`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-issuer-url=<URL>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-issuer-url="https://quorum-key-manager.eu.auth0.com/.well-known/jwks.json"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_ISSUER-URL="https://quorum-key-manager.eu.auth0.com/.well-known/jwks.json"
+
+When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), URL of the OpenID Connect server.
+This option must be used with [--auth-oidc-ca-cert](#auth-oidc-ca-cert).
+
 ### `health-port`
 
 === "Syntax"
@@ -26,13 +157,13 @@ You can specify Quorum Key Manager options:
     --health-port=<PORT>
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --health-port=6174
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     HEALTH_PORT="6174"
@@ -59,13 +190,13 @@ Print help information and exit.
     --http-host=<HOST>
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --http-host=127.0.0.1
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     HTTP_HOST="127.0.0.1"
@@ -81,7 +212,7 @@ Host to expose HTTP service.
     --http-port=<PORT>
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --http-port=6174
@@ -104,13 +235,13 @@ The default is 8080.
     --log-format=<STRING>
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --log-formatter="text"
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     LOG_FORMATTER="text"
@@ -128,13 +259,13 @@ The default is `text`.
     --log-level=<STRING>
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --log-level="debug"
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     LOG_LEVEL="debug"
@@ -152,13 +283,13 @@ The default is `info`.
     --log-timestamp[=<BOOLEAN>]
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --log-timestamp
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     LOG_TIMESTAMP=true
@@ -175,13 +306,13 @@ The default is `true`.
     --manifest-path=<PATH>
     ```
 
-=== "Command Line"
+=== "Example"
 
     ```bash
     --manifest-path=/config/default.yml
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     MANIFEST_PATH="/config/default.yml"

@@ -18,7 +18,7 @@ If no credentials are passed, the request is not rejected and processed as an an
 If not rejected during the authentication process, the request is submitted to the targeted service which is responsible
 for performing [authorization](#authorization) checks based on request context before performing service operations.
 
-To successfully authenticate to QKM, users (or clients) are expected to present some credentials into every request.
+To successfully authenticate to QKM, users are expected to present some credentials into every request.
 Credentials can be passed through three methods of authentication:
 
 - [OIDC](../HowTo/Authenticate/JWT.md) - OpenID Connect standard using JSON Web Tokens

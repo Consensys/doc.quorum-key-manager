@@ -67,7 +67,7 @@ nav:
         - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
         - Sign an Ethereum transaction: Tutorials/SignEthereumTransaction.md
     - Reference:
-        - Command Line Options: Reference/CLI-Syntax.md
+        - Command line options: Reference/CLI-Syntax.md
         - REST API methods: Reference/Rest.md
         - RBAC permissions: Reference/RBAC-Permissions.md
 
