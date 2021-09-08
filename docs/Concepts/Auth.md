@@ -4,57 +4,58 @@ description: Authentication concept page
 
 # Quorum Key Manager authentication and authorization
 
-## Terminology
-
-### Action
-
-### Resource
-
-### Tenant
-
-### Permission
-
-### Role
-
 ## Authentication
 
-Quorum Key Manager (QKM) authentication is inspired by the Kubernetes authentication mechanism.
-
-QKM doesn't internally store or represent user objects.
-Instead, it attaches user information to every incoming request.
-
-The authentication process consists of challenging incoming request authentication credentials, and if credentials are valid,
-extracting user information and attaching it to the request context.
-If credentials are invalid, the request is rejected.
-If no credentials are passed, the request is processed as an anonymous request.
-
-If not rejected during the authentication process, the request is submitted to the targeted service which is responsible
-for performing [authorization](#authorization) checks based on request context before performing service operations.
-
-To authenticate to QKM, users must provide credentials in every request through one of the following methods:
+To authenticate to Quorum Key Manager (QKM), users must provide credentials in every request through one of the following methods:
 
 - [OIDC](../HowTo/Authenticate/JWT.md) - OpenID Connect standard using JSON Web Tokens
 - [TLS](../HowTo/Authenticate/TLS.md) - Client TLS authentication
 - [API key](../HowTo/Authenticate/API-Key.md) - Set of keys defined in a CSV file and loaded at startup
 
+The authentication process consists of challenging incoming request authentication credentials.
+If credentials are valid, QKM extracts user information and attaches it to the request context.
+If credentials are invalid, QKM rejects the request.
+If no credentials are passed, QKM processes the request as an anonymous request.
+
 ## Authorization
 
-After a request gets through the [authentication](#authentication) process, it's submitted to a Service.
-A Service is responsible to proceed to Authorization checks.
-If a Service calls another Service both are responsible to perform their own Authorization checks.
+After QKM [authenticates](#authentication) a request, it submits the request to the targeted service which performs
+authorization checks based on request context before performing service operations.
 
-When a Service receives a request, two cases can appear:
+The authorization process restricts system access through [role-based access control (RBAC)](#role-based-access-control)
+or [resource-based access control](#resource-based-access-control).
 
-- The request was authenticated and it holds user information.
-- The request was neither authenticated nor rejected and it holds default username `system:anonymous` and group `system:unauthenticated`.
+### Terminology
 
-A Service uses Policies to control whether the request is authorized or not to perform a certain Action over the Service.
+- **Action** - A functionality of your application to restrict to some users.
+  For example, read, create, sign, encrypt, delete, and destroy.
+- **Resource** - A representation of a business entity, to be managed by your application.
+  Authorization restricts access over resources.
+  QKM currently has the following resources:
 
-Policies are attributed to groups, so it's possible to determine which Policies apply to a request by basing on the groups in the User Information.
+    | Name         | Description                                                         |
+    | :----------: | :-----------------------------------------------------------------: |
+    | Alias        | A representation of an external public key. For example, a [Tessera](https://docs.tessera.consensys.net/en/stable/) address. |
+    | Eth1 account | A cryptographic key allowing interaction with the Ethereum network. |
+    | Key          | A cryptographic key.                                                |
+    | Node         | A representation of an underlying blockchain node.                  |
+    | Secret       | A key-value element stored in a secure vault system.                |
+    | Store        | A set of secrets, keys, or Eth1 accounts.                           |
+
+- **Tenant** - The highest access level to resources.
+  In [resource-based access control](#resource-based-access-control), you must pass a list of allowed tenants when defining a
+  resource [manifest file](../HowTo/Use-Manifest-File.md).
+- **Permission** - An authorization of an action over a resource, used in [role-based access control (RBAC)](#role-based-access-control).
+  An identity provider assigns [permissions](../Reference/RBAC-Permissions.md) to users, and your application receives
+  them at each request.
+  Permissions take the form `action:resource` and are not mutually exclusive.
+- **Role** - A named set of permissions defined by a [manifest](../HowTo/Use-Manifest-File.md).
+  Alternatively, you can [use Auth0 to specify roles](https://auth0.com/docs/authorization/rbac/roles/create-roles) and
+  attach permissions to your token.
 
 ### Role-based access control
 
-Role-based access control (RBAC) restricts system access to authorized users.
+Role-based access control (RBAC) restricts actions over resources to authorized users.
 
 See the [full list of RBAC permissions](../Reference/RBAC-Permissions.md).
 

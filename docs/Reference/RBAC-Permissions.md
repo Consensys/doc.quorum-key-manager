@@ -7,16 +7,16 @@ description: Role-based access control permissions
 The following tables list the permissions for [role-based access control](../Concepts/Auth.md#role-based-access-control).
 Each permission has a list of allowed [REST endpoints](Rest.md).
 
-## Ethereum accounts
+## Eth1 accounts
 
-| Name                 | Description                                      | Allowed endpoints                    |
-| :------------------: | :----------------------------------------------: | :----------------------------------: |
-| `read:ethAccount`    | Allows reading operations over Ethereum accounts | Get, list, get deleted, list deleted |
-| `create:ethAccount`  | Allows creating Ethereum accounts                | Create, import, update               |
-| `delete:ethAccount`  | Allows soft-deleting Ethereum accounts           | Delete, restore                      |
-| `destroy:ethAccount` | Allows permanently deleting Ethereum accounts    | Delete, restore, destroy             |
-| `sign:ethAccount`    | Allows signing and verifying signatures          | *All sign endpoints*, EC recover     |
-| `encrypt:ethAccount` | Allows encryption and decryption                 | Encrypt, decrypt                     |
+| Name                 | Description                                  | Allowed endpoints                    |
+| :------------------: | :------------------------------------------: | :----------------------------------: |
+| `read:ethAccount`    | Allows reading operations over Eth1 accounts | Get, list, get deleted, list deleted |
+| `create:ethAccount`  | Allows creating Eth1 accounts                | Create, import, update               |
+| `delete:ethAccount`  | Allows soft-deleting Eth1 accounts           | Delete, restore                      |
+| `destroy:ethAccount` | Allows permanently deleting Eth1 accounts    | Delete, restore, destroy             |
+| `sign:ethAccount`    | Allows signing and verifying signatures      | *All sign endpoints*, EC recover     |
+| `encrypt:ethAccount` | Allows encryption and decryption             | Encrypt, decrypt                     |
 
 ## Keys
 
@@ -29,7 +29,7 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 | `sign:key`    | Allows signing and verifying signatures | Sign                                 |
 | `encrypt:key` | Allows encryption and decryption        | Encrypt, decrypt                     |
 
-# Nodes
+## Nodes
 
 | Name          | Description                          | Allowed endpoints                    |
 | :-----------: | :----------------------------------: | :----------------------------------: |
