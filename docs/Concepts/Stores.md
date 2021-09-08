@@ -54,5 +54,5 @@ An account store can generate and import accounts but does not allow access to t
 You can implement an account store based on an underlying key store to perform signing, while the account store is
 responsible for performing Ethereum-specific processing, formatting, and encoding.
 
-The [`/eth1`](https://consensys.github.io/quorum-key-manager/#tag/Ethereum-Account) REST API endpoint can be used to
+The [`/ethereum`](https://consensys.github.io/quorum-key-manager/#tag/Ethereum-Account) REST API endpoint can be used to
 interact with an Ethereum account store.

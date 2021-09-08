@@ -1,5 +1,5 @@
 ---
-description: Add store using manifest
+description: Add stores using manifest
 ---
 
 # Add Store to Quorum Key Manager

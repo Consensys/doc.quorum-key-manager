@@ -1,5 +1,5 @@
 ---
-description: Add Node using manifest
+description: Add nodes using manifest
 ---
 
 # Add Node to Quorum Key Manager

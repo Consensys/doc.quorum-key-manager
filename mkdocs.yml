@@ -61,9 +61,9 @@ nav:
         - Architecture: Concepts/ArchitectureOverview.md
         - Stores: Concepts/Stores.md
         - Nodes: Concepts/Nodes.md
+        - RBAC: Concepts/RBAC.md
     - Tutorials:
-        - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
-        - Sign an Ethereum transaction: Tutorials/SignEthereumTransaction.md
+        - Proxy RPC Node calls: Tutorials/JsonRPCProxy.md
     - Reference:
         - Command Line Options: Reference/CLI-Syntax.md
         - REST API methods: Reference/Rest.md
