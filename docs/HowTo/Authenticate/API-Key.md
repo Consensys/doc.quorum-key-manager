@@ -46,5 +46,5 @@ scheme with a blank username and the API key as the password:
     Authorization: Basic OjA2ZGExYWZlLTE2ZDMtNDhmZS04ZWMyLWZlYTg2NDhkNzM3YQ==
     ```
 
-If a user passes an API key that is in the CSV file, user information from the corresponding line in the CSV file is
+If a user passes an API key that's in the CSV file, user information from the corresponding line in the CSV file is
 attached to the request.

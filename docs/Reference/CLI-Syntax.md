@@ -60,7 +60,7 @@ When using [API key authentication](../HowTo/Authenticate/API-Key.md), path to t
 
 When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), path to the certificate authority (CA) key for
 the OpenID server.
-This option must be used with [--auth-oidc-issuer-url](#auth-oidc-issuer-url).
+You must use this option with [--auth-oidc-issuer-url](#auth-oidc-issuer-url).
 
 ### `auth-oidc-claim-permissions`
 
@@ -148,7 +148,7 @@ The default is the standard claim `sub`.
     AUTH_OIDC_ISSUER-URL="https://quorum-key-manager.eu.auth0.com/.well-known/jwks.json"
 
 When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), URL of the OpenID Connect server.
-This option must be used with [--auth-oidc-ca-cert](#auth-oidc-ca-cert).
+You must use this option with [--auth-oidc-ca-cert](#auth-oidc-ca-cert).
 
 ### `auth-tls-ca`
 

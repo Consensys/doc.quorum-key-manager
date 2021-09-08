@@ -5,54 +5,42 @@ description: Role-based access control permissions
 # Role-based access control permissions
 
 The following tables list the permissions for [role-based access control](../Concepts/Auth.md#role-based-access-control).
+Each permission has a list of allowed [REST endpoints](Rest.md).
 
-## Secrets
+## Ethereum accounts
 
-| Name             | Description                            | Allowed endpoints                    |
-| :--------------: | :------------------------------------: | :----------------------------------: |
-| `read:secret`    | Allows reading operations over secrets | get, list, list deleted, get deleted |
-| `set:secret`     | Allows creating secrets                | set, update                          |
-| `delete:secret`  | Allows soft-deleting secrets           | delete, undelete                     |
-| `destroy:secret` | Allows permanently deleting secrets    | delete, undelete, destroy            |
+| Name                 | Description                                      | Allowed endpoints                    |
+| :------------------: | :----------------------------------------------: | :----------------------------------: |
+| `read:ethAccount`    | Allows reading operations over Ethereum accounts | Get, list, get deleted, list deleted |
+| `create:ethAccount`  | Allows creating Ethereum accounts                | Create, import, update               |
+| `delete:ethAccount`  | Allows soft-deleting Ethereum accounts           | Delete, restore                      |
+| `destroy:ethAccount` | Allows permanently deleting Ethereum accounts    | Delete, restore, destroy             |
+| `sign:ethAccount`    | Allows signing and verifying signatures          | *All sign endpoints*, EC recover     |
+| `encrypt:ethAccount` | Allows encryption and decryption                 | Encrypt, decrypt                     |
 
 ## Keys
 
 | Name          | Description                             | Allowed endpoints                    |
 | :-----------: | :-------------------------------------: | :----------------------------------: |
-| `read:key`    | Allows reading operations over keys     | get, list, list deleted, get deleted |
-| `create:key`  | Allows creating keys                    | create, import, update               |
-| `delete:key`  | Allows soft-deleting keys               | delete, undelete                     |
-| `destroy:key` | Allows permanently deleting keys        | delete, undelete, destroy            |
-| `sign:key`    | Allows signing and verifying signatures | sign                                 |
-| `encrypt:key` | Allows encryption and decryption        | encrypt, decrypt                     |
-
-## Eth1
-
-| Name           | Description                                  | Allowed endpoints                    |
-| :------------: | :------------------------------------------: | :----------------------------------: |
-| `read:eth1`    | Allows reading operations over eth1 accounts | get, list, list deleted, get deleted |
-| `create:eth1`  | Allows creating eth1 accounts                | create, import, update               |
-| `delete:eth1`  | Allows soft-deleting eth1 accounts           | delete, undelete                     |
-| `destroy:eth1` | Allows permanently deleting eth1 accounts    | delete, undelete, destroy            |
-| `sign:eth1`    | Allows signing and verifying signatures      | sign, sign transaction, sign EEA, sign quorum private, sign, sign typed data, EC recover |
-| `encrypt:eth1` | Allows encryption and decryption             | encrypt, decrypt                     |
-
-## Stores
-
-| Name            | Description                                | Allowed endpoints                    |
-| :-------------: | :----------------------------------------: | :----------------------------------: |
-| `read:store`    | Allows reading operations over stores      | get, list, list deleted, get deleted |
-| `create:store`  | Allows creating stores                     | create, update                       |
-| `delete:store`  | Allows soft-deleting stores                | delete, undelete                     |
-| `destroy:store` | Allows permanently deleting stores         | delete, undelete, destroy            |
-| `admin:store`   | Allows accessing every resource of a store | *all endpoints*                      |
+| `read:key`    | Allows reading operations over keys     | Get, list, get deleted, list deleted |
+| `create:key`  | Allows creating keys                    | Create, import, update               |
+| `delete:key`  | Allows soft-deleting keys               | Delete, restore                      |
+| `destroy:key` | Allows permanently deleting keys        | Delete, restore, destroy             |
+| `sign:key`    | Allows signing and verifying signatures | Sign                                 |
+| `encrypt:key` | Allows encryption and decryption        | Encrypt, decrypt                     |
 
 # Nodes
 
-| Name            | Description                                           | Allowed endpoints                              |
-| :-------------: | :---------------------------------------------------: | :--------------------------------------------: |
-| `read:nodes`    | Allows reading operations over nodes                  | get, list, list deleted, get deleted           |
-| `create:nodes`  | Allows creating nodes                                 | create, update                                 |
-| `delete:nodes`  | Allows soft-deleting nodes                            | delete, undelete                               |
-| `destroy:nodes` | Allows permanently deleting nodes                     | delete, undelete, destroy                      |
-| `proxy:nodes`   | Allows using calls to the underlying blockchain nodes | `eth_send_transaction`, `eea_send_transaction` |
+| Name          | Description                          | Allowed endpoints                    |
+| :-----------: | :----------------------------------: | :----------------------------------: |
+| `read:nodes`  | Allows reading operations over nodes | Get, list, get deleted, list deleted |
+| `proxy:nodes` | Allows creating nodes                | Create, update                       |
+
+## Secrets
+
+| Name             | Description                            | Allowed endpoints                    |
+| :--------------: | :------------------------------------: | :----------------------------------: |
+| `read:secret`    | Allows reading operations over secrets | Get, list, get deleted, list deleted |
+| `set:secret`     | Allows creating secrets                | Set, update                          |
+| `delete:secret`  | Allows soft-deleting secrets           | Delete, restore                      |
+| `destroy:secret` | Allows permanently deleting secrets    | Delete, restore, destroy             |

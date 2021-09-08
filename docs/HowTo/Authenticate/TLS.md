@@ -17,7 +17,7 @@ command line option when starting QKM.
 
 The CA certificate must contain one or more CAs to validate client certificates presented to QKM.
 
-If a client presents a valid certificate signed by one of the CAs, then the client is considered authenticated.
+If a client presents a valid certificate signed by one of the CAs, then the client is authenticated.
 
 QKM extracts the following user information from the subject field of the client certificate:
 
