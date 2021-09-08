@@ -1,10 +1,11 @@
 ---
-description: Add store
+description: Add store using manifest
 ---
 
-# Add Store using manifest file
+# Add Store to Quorum Key Manager
 
 There are three kind of stores Quorum Key Manager supports:
+
 - `Secret Store`: It is used to store secrets resources.
 - `Key Store`: It is used to store key pairs.
 - `Ethereum Store`: It is used to store ethereum wallets.

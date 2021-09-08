@@ -42,23 +42,3 @@ Use the following fields to configure one or more [nodes](../Concepts/Nodes.md):
     ```bash
     key-manager run --manifest-path=/config/manifest.yml
     ```
-
-
-
-    # GoQuorum node manifest
-    - kind: Node
-      version: 0.0.0
-      name: goquorum-node
-      specs:
-        rpc:
-          addr: http://goquorum1:8545
-        tessera:
-          addr: http://tessera1:9080
-
-    # Besu node manifest
-    - kind: Node
-      version: 0.0.0
-      name: besu-node
-      specs:
-        rpc:
-          addr: http://validator1:8545
