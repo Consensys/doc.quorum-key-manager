@@ -46,19 +46,20 @@ or [resource-based access control](#resource-based-access-control).
   In [resource-based access control](#resource-based-access-control), you must pass a list of allowed tenants when defining a
   resource [manifest file](../HowTo/Use-Manifest-File.md).
 - **Permission** - An authorization of an action over a resource, used in [role-based access control (RBAC)](#role-based-access-control).
-  An identity provider assigns [permissions](../Reference/RBAC-Permissions.md) to users, and your application receives
-  them at each request.
-  Permissions take the form `action:resource` and are not mutually exclusive.
-- **Role** - A named set of permissions defined by a [manifest](../HowTo/Use-Manifest-File.md).
+  [Permissions](../Reference/RBAC-Permissions.md) take the form `action:resource` and are not mutually exclusive.
+- **Role** - A named set of permissions defined in a [manifest file](../HowTo/Use-Manifest-File.md).
   Alternatively, you can [use Auth0 to specify roles](https://auth0.com/docs/authorization/rbac/roles/create-roles) and
   attach permissions to your token.
 
 ### Role-based access control
 
 Role-based access control (RBAC) restricts actions over resources to authorized users.
+Access is specified by roles assigned to users, using a [manifest file](../HowTo/Use-Manifest-File.md) or an
+[identity provider](https://auth0.com/docs/authorization/rbac/roles/create-roles).
 
 See the [full list of RBAC permissions](../Reference/RBAC-Permissions.md).
 
 ### Resource-based access control
 
-Resource-based access control restricts access resource by resource.
+Resource-based access control restricts access to resources to authorized users.
+Access is specified by allowed tenants for each resource, using a [manifest file](../HowTo/Use-Manifest-File.md).
