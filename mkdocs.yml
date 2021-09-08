@@ -54,6 +54,9 @@ nav:
         - Build from source: Get-Started/Build-From-Source.md
     - How to:
         - Use a manifest file: HowTo/Use-Manifest-File.md
+        - Add Store: HowTo/Add-store.md
+        - Add Node: HowTo/Add-node.md
+        - Define Node: HowTo/Define-role.md
     - Concepts:
         - Architecture: Concepts/ArchitectureOverview.md
         - Stores: Concepts/Stores.md
