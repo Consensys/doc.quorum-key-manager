@@ -7,9 +7,10 @@ description: Using a manifest file
 Use a YAML manifest file to configure the Quorum Key Manager (QKM) runtime components.
 You can configure:
 
-- [Stores](Store.md).
-- [Nodes](Node.md).
-- [Roles](Role.md).
+- [Stores](Store.md) - A store interfaces with an underlying secure system storage (such as HashiCorp
+  Vault, Azure Key Vault, or AWS KMS) to perform crypto-operations.
+- [Nodes](Node.md) - A node interfaces with underlying node endpoints (such as RPC nodes and Tessera nodes).
+- [Roles](Role.md) - A role is a named set of permissions assigned to a user.
 
 You can define multiple manifests in one manifest file, each separated by a dash (`-`).
 

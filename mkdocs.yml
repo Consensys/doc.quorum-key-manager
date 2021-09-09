@@ -63,7 +63,7 @@ nav:
         - Stores: Concepts/Stores.md
         - Nodes: Concepts/Nodes.md
     - Tutorials:
-        - Proxy RPC node calls: Tutorials/JsonRPCProxy.md
+        - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
     - Reference:
         - Command Line Options: Reference/CLI-Syntax.md
         - REST API methods: Reference/Rest.md
