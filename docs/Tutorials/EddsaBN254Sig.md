@@ -11,8 +11,8 @@ algorithm and BN254 elliptic curve.
 
 - [Quorum Key Manager installed](../Get-Started/Build-From-Source.md)
 - [`curl` command line](https://curl.se/download.html)
-- [Hashicorp Vault](https://github.com/hashicorp/vault) service running
-- [Hashicorp Vault - Orchestrate Plugin](https://github.com/ConsenSys/orchestrate-hashicorp-vault-plugin) loaded in Hashicorp Vault service
+- [HashiCorp Vault](https://github.com/hashicorp/vault) service running
+- [HashiCorp Vault - Orchestrate Plugin](https://github.com/ConsenSys/orchestrate-hashicorp-vault-plugin) loaded in HashiCorp Vault service
 
 ## Steps
 
