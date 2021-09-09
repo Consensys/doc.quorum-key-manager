@@ -19,9 +19,9 @@ following vaults:
 
 ## Why use Quorum Key Manager?
 
-Manage users' secrets, keys and ethereum wallets from a single API while having everything stored in a secure vault, or V3 keystores.
+Manage users' secrets, keys, and Ethereum wallets from a single API while having everything stored in a secure vault, or V3 keystores.
 
-Manage users' access rights using authentication and authorization customizable access policies, and audit every access to your private resources.
+Manage users' access rights using customizable access policies, and audit access to your private resources.
 
 Quorum Key Manager is compatible with GoQuorum, Hyperledger Besu, Tessera, and Codefi Orchestrate.
 
@@ -36,12 +36,12 @@ Quorum Key Manager is compatible with GoQuorum, Hyperledger Besu, Tessera, and C
 ### Versatility
 
 - Supports public and private Ethereum networks.
-- Supports every kind of signing transactions, including private transaction
-- Support for signing [ethereum message] and [typed data].
-- Supports different ecliptic curves, such as eccda and eddsa, and signing algorithm, such as bn254 and secp256k1.
+- Supports signing public and private transactions.
+- Supports signing [Ethereum messages] and [typed data].
+- Supports different elliptic curves, such as ECDSA and EDDSA; and signing algorithms, such as BN254 and SECP256K1.
 - Supports secrets versioning.
 
 <!--links-->
 [BSL 1.1 license]: https://mariadb.com/bsl11/
 [typed data]: https://eips.ethereum.org/EIPS/eip-712
-[ethereum message]: https://eips.ethereum.org/EIPS/eip-191
+[Ethereum messages]: https://eips.ethereum.org/EIPS/eip-191

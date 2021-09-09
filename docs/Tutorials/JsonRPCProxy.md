@@ -4,7 +4,8 @@ description: JSON-RPC node proxy tutorial
 
 # Connect to the JSON-RPC node proxy
 
-This tutorial walks you through connecting to the JSON-RPC node proxy and signing an Ethereum transaction using Quorum Key Manager as remote and secure storage for your wallets.
+This tutorial walks you through connecting to the JSON-RPC node proxy and signing an Ethereum transaction using Quorum
+Key Manager (QKM) as remote and secure storage for your wallets.
 
 ## Prerequisites
 
@@ -14,33 +15,35 @@ This tutorial walks you through connecting to the JSON-RPC node proxy and signin
 
 ## Steps
 
-1. In the Quorum Key Manager [manifest file](../HowTo/Use-Manifest-File.md), specify an `Ethereum` [Store](../HowTo/Add-Store.md#ethereum-store) to allocate your Ethereum wallets, and the RPC [Node](../HowTo/Add-Node.md) to proxy your calls using Quorum Key Manager.
+1. In the QKM [manifest file](../HowTo/Use-Manifest-File/Overview.md), specify an
+   [Ethereum store](../HowTo/Use-Manifest-File/Store.md#ethereum-store) to allocate your Ethereum wallets, and the
+   [RPC node](../HowTo/Use-Manifest-File/Node.md) to proxy your calls using QKM.
 
-Configure `AzureKeys` by filling in the `specs` like follow:
+    !!! example "Example manifest file"
 
-    ```yaml
-    - kind: Eth1Account
-      version: 0.0.1
-      name: eth1-accounts
-      specs:
-        keystore: AzureKeys
-        specs:
-          vaultName: <AZURE-VAULT-ID>
-          tenantID: <TENANT-ID>
-          clientID: <CLIENT-ID>
-          clientSecret: <SECRET>
+        ```yaml
+        - kind: Ethereum
+          version: 0.0.1
+          name: eth1-accounts
+          specs:
+            keystore: AzureKeys
+            specs:
+              vaultName: <AZURE-VAULT-ID>
+              tenantID: <TENANT-ID>
+              clientID: <CLIENT-ID>
+              clientSecret: <SECRET>
 
-    - kind: Node
-      name: quorum-node
-      version: 0.0.0
-      specs:
-        rpc:
-          addr: http://quorum1:8545
-        tessera:
-          addr: http://tessera1:9080
-    ```
+        - kind: Node
+          name: quorum-node
+          version: 0.0.0
+          specs:
+            rpc:
+              addr: http://quorum1:8545
+            tessera:
+              addr: http://tessera1:9080
+        ```
 
-2. Start Quorum Key Manager with the manifest file by using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option:
+2. Start QKM with the manifest file by using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option:
 
     ```bash
     key-manager run --manifest-path=<PATH-TO-MANIFEST-FILE>

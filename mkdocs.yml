@@ -53,17 +53,17 @@ nav:
         - Run Quorum Key Manager from Docker image: Get-Started/Use-Docker.md
         - Build from source: Get-Started/Build-From-Source.md
     - How to:
-        - Use a manifest file: HowTo/Use-Manifest-File.md
-        - Add Store: HowTo/Add-store.md
-        - Add Node: HowTo/Add-node.md
-        - Define Node: HowTo/Define-role.md
+        - Use a manifest file:
+            - Overview: HowTo/Use-Manifest-File/Overview.md
+            - Add a store: HowTo/Use-Manifest-File/Store.md
+            - Add a node: HowTo/Use-Manifest-File/Node.md
+            - Add a role: HowTo/Use-Manifest-File/Role.md
     - Concepts:
         - Architecture: Concepts/ArchitectureOverview.md
         - Stores: Concepts/Stores.md
         - Nodes: Concepts/Nodes.md
-        - RBAC: Concepts/RBAC.md
     - Tutorials:
-        - Proxy RPC Node calls: Tutorials/JsonRPCProxy.md
+        - Proxy RPC node calls: Tutorials/JsonRPCProxy.md
     - Reference:
         - Command Line Options: Reference/CLI-Syntax.md
         - REST API methods: Reference/Rest.md
