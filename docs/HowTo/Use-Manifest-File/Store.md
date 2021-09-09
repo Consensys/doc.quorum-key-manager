@@ -79,7 +79,7 @@ Use the following fields to configure one or more [key stores](../../Concepts/St
 
 Use the following fields to configure one or more [Ethereum stores](../../Concepts/Stores.md#ethereum-store):
 
-- `kind`: *string* - set to `Ethereum`
+- `kind`: *string* - the string `Ethereum`
 - `version`: *string* - store version
 - `name`: *string* - name of the store
 - `specs`: *object* - any valid `keystore` (`AwsKeys`, `AzureKeys`, or `HashicorpKeys`), and the `specs` fields for that

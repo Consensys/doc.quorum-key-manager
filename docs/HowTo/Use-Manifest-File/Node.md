@@ -14,8 +14,8 @@ Use the following fields to configure one or more nodes:
 - `version`: *string* - node version
 - `name`: *string* - name of the node
 - `specs`: *object* - configuration object to connect to various endpoints, with the following fields for each endpoint:
-  - `rpc` or `tessera`: (field name is the name of the endpoint)
-    - `addr`: *string* - address of the endpoint
+    - `rpc` or `tessera`: (field name is the name of the endpoint)
+        - `addr`: *string* - address of the endpoint
 - `tags`: *map* of *strings* to *strings* - (optional) user set information about the node
 
 !!! example "Example node manifest file"
