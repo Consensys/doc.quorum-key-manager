@@ -24,7 +24,7 @@ Key Manager (QKM) as remote and secure storage for your wallets.
         ```yaml
         - kind: Ethereum
           version: 0.0.1
-          name: eth1-accounts
+          name: eth-accounts
           specs:
             keystore: AzureKeys
             specs:
@@ -54,7 +54,7 @@ Key Manager (QKM) as remote and secure storage for your wallets.
     === "curl HTTP request"
 
         ```bash
-        curl -X POST 'quorum-key-manager/stores/eth-accounts/ethereum'
+        curl -X POST 'http://localhost:8080/stores/eth-accounts/ethereum'
         ```
 
     === "JSON result"
@@ -77,11 +77,25 @@ Key Manager (QKM) as remote and secure storage for your wallets.
     === "curl HTTP request"
 
         ```bash
-        curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{"from": "0xd8c88f28748367a11d3c6fc010eef7b670ac016f","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567", "data":"0xafed"}], "id":1}' quorum-key-manager/nodes/quorum-node
+        curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{"from": "0xd8c88f28748367a11d3c6fc010eef7b670ac016f","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567", "data":"0xafed"}], "id":1}' http://localhost:8080/nodes/quorum-node
         ```
 
     === "JSON result"
 
         ```json
         {"jsonrpc":"2.0","result":"0x8c961ba2c3f51f9088e1a12a81bb1ad9c551ccfad75615f39e4fc95c3bb7086b","error":null,"id":1}
+        ```
+
+5. Fetch the transaction receipt using the RPC node proxy:
+
+    === "curl HTTP request"
+
+        ```bash
+        curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x8c961ba2c3f51f9088e1a12a81bb1ad9c551ccfad75615f39e4fc95c3bb7086b"],"id":1}' http://localhost:8080/nodes/quorum-node
+        ```
+
+    === "JSON result"
+
+        ```json
+        {"jsonrpc":"2.0","result":{"blockHash":"0x593a660cbd41df2bb58e56bdb70265c8d2738e5d8c9f01bd47e10eec89ebe052","blockNumber":"0x9b","contractAddress":null,"cumulativeGasUsed":"0x5290","from":"0xf772512f135c92a94a0fece58222c982bec0b837","gasUsed":"0x5290","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":"0xd46e8dd67c5d32be8058bb8eb970870f07244567","transactionHash":"0xe684bfe231e9b4d2f3b309532a495bcf8a9acc369940b0bd464678987f1276a3","transactionIndex":"0x0"},"error":null,"id":1}
         ```

@@ -64,8 +64,9 @@ nav:
         - Nodes: Concepts/Nodes.md
     - Tutorials:
         - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
+        - Sign with EDDSA and BN254: Tutorials/EddsaBN254Sig.md
     - Reference:
-        - Command Line Options: Reference/CLI-Syntax.md
+        - Command line options: Reference/CLI-Syntax.md
         - REST API methods: Reference/Rest.md
 
 markdown_extensions:

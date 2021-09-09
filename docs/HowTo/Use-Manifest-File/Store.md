@@ -91,7 +91,7 @@ Use the following fields to configure one or more [Ethereum stores](../../Concep
     # Ethereum store manifest
     - kind: Ethereum
       version: 0.0.1
-      name: eth1-accounts
+      name: eth-accounts
       specs:
         keystore: HashicorpKeys
         specs:
