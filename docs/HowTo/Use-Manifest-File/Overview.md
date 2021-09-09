@@ -38,8 +38,8 @@ You can define multiple manifests in one manifest file, each separated by a dash
         token: YOUR_TOKEN
         namespace: user1_space
 
-    # Eth1 account store manifest
-    - kind: Eth1Account
+    # Ethereum store manifest
+    - kind: Ethereum
       version: 0.0.1
       name: eth1-accounts
       specs:
