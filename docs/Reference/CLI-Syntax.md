@@ -187,4 +187,4 @@ The default is `true`.
     MANIFEST_PATH="/config/default.yml"
     ```
 
-Path to manifest file/folder to configure key manager stores and nodes.
+Path to [manifest file/folder](../HowTo/Use-Manifest-File/Overview.md) to configure key manager stores and nodes.

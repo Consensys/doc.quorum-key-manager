@@ -53,16 +53,20 @@ nav:
         - Run Quorum Key Manager from Docker image: Get-Started/Use-Docker.md
         - Build from source: Get-Started/Build-From-Source.md
     - How to:
-        - Use a manifest file: HowTo/Use-Manifest-File.md
+        - Use a manifest file:
+            - Overview: HowTo/Use-Manifest-File/Overview.md
+            - Add a store: HowTo/Use-Manifest-File/Store.md
+            - Add a node: HowTo/Use-Manifest-File/Node.md
+            - Add a role: HowTo/Use-Manifest-File/Role.md
     - Concepts:
         - Architecture: Concepts/ArchitectureOverview.md
         - Stores: Concepts/Stores.md
         - Nodes: Concepts/Nodes.md
     - Tutorials:
         - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
-        - Sign an Ethereum transaction: Tutorials/SignEthereumTransaction.md
+        - Sign with EDDSA and BN254: Tutorials/EddsaBN254Sig.md
     - Reference:
-        - Command Line Options: Reference/CLI-Syntax.md
+        - Command line options: Reference/CLI-Syntax.md
         - REST API methods: Reference/Rest.md
 
 markdown_extensions:

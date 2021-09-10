@@ -6,7 +6,7 @@ description: Nodes concept page
 
 A node is a Quorum Key Manager (QKM) component that interfaces with underlying node endpoints (such as RPC nodes and Tessera nodes).
 
-You can configure a node using a [node manifest](../HowTo/Use-Manifest-File.md#node-manifest), which
+You can configure a node using a [node manifest](../HowTo/Use-Manifest-File/Node.md), which
 includes the configuration to [connect to the JSON-RPC node proxy](../Tutorials/JsonRPCProxy.md).
 
 When connected to the JSON-RPC node proxy, QKM intercepts the following methods for performing remote transaction signing:
