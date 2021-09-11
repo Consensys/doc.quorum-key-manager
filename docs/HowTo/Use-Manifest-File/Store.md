@@ -82,8 +82,8 @@ Use the following fields to configure one or more [Ethereum stores](../../Concep
 - `kind`: *string* - the string `Ethereum`
 - `version`: *string* - store version
 - `name`: *string* - name of the store
-- `specs`: *object* - any valid `keystore` (`AwsKeys`, `AzureKeys`, or `HashicorpKeys`), and the `specs` fields for that
-  key store, as shown in the following example
+- `specs`: *object* - configuration object containing any valid `keystore` (`AwsKeys`, `AzureKeys`, or `HashicorpKeys`),
+  and the `specs` fields for that key store, as shown in the following example
 
 !!! Example "Example Ethereum store manifest file"
 

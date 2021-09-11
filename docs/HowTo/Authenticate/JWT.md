@@ -4,7 +4,7 @@ description: How to authenticate QKM with OpenID Connect and JWTs.
 
 # Authenticate with JSON Web Tokens
 
-You can [authenticate](../../Concepts/Auth.md#authentication) incoming Quorum Key Manager (QKM) requests with the
+You can [authenticate](../../Concepts/Authentication.md#authentication) incoming Quorum Key Manager (QKM) requests with the
 [OpenID Connect (OIDC)](https://openid.net/connect/) standard using [JSON Web Tokens (JWTs)](https://jwt.io/).
 
 User requests can present a JWT through the HTTP `Authorization` header with value `Bearer <token>`.
