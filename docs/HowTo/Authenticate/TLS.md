@@ -21,9 +21,9 @@ If a client presents a valid certificate signed by one of the CAs, then the clie
 
 QKM extracts the following user information from the subject field of the client certificate:
 
-- Username and tenant from the common name (CN) (for example, `/CN=tenant|user`)
-- Roles from the certificate's organization (O) (for example, `/O=role1/O=role2`)
-- Permissions from the certificate's organization unit (OU) (for example, `/OU=*:read/O=secret:write`)
+- Username and [tenant](../../Concepts/Authorization.md#tenant) from the common name (CN) (for example, `/CN=tenant|user`)
+- [Roles](../../Concepts/Authorization.md#role) from the certificate's organization (O) (for example, `/O=role1/O=role2`)
+- [Permissions](../../Concepts/Authorization.md#permission) from the certificate's organization unit (OU) (for example, `/OU=*:read/O=secret:write`)
 
 You can use the `openssl` command line tool to generate a certificate signing request:
 
