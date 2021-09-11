@@ -4,8 +4,8 @@ description: Authorization concept page
 
 # Authorization
 
-After QKM [authenticates](Authentication.md) a request, it submits the request to the targeted service which performs
-authorization checks based on request context before performing service operations.
+After Quorum Key Manager (QKM) [authenticates](Authentication.md) an incoming request, it submits the request to the
+targeted service which performs authorization checks based on request context before performing service operations.
 
 The authorization process restricts system access through [role-based access control](#role-based-access-control)
 or [resource-based access control](#resource-based-access-control).

@@ -58,7 +58,7 @@ When using [API key authentication](../HowTo/Authenticate/API-Key.md), path to t
     ```bash
     AUTH_OIDC_CA_CERT="ca.key"
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), path to the certificate authority (CA) key for
+When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), path to the certificate authority (CA) key for
 the OpenID server.
 You must use this option with [--auth-oidc-issuer-url](#auth-oidc-issuer-url).
 
@@ -81,7 +81,7 @@ You must use this option with [--auth-oidc-issuer-url](#auth-oidc-issuer-url).
     ```bash
     AUTH_OIDC_CLAIM_PERMISSIONS="scope"
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), claim from which to extract [permissions](RBAC-Permissions.md).
+When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract [permissions](RBAC-Permissions.md).
 The default is the standard scope `scope`.
 
 ### `auth-oidc-claim-roles`
@@ -103,7 +103,7 @@ The default is the standard scope `scope`.
     ```bash
     AUTH_OIDC_CLAIM_ROLES="qkm.roles"
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), claim from which to extract roles.
+When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract roles.
 The default is `qkm.roles`.
 
 ### `auth-oidc-claim-username`
@@ -125,7 +125,7 @@ The default is `qkm.roles`.
     ```bash
     AUTH_OIDC_CLAIM_USERNAME="sub"
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), claim from which to extract the username.
+When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract the username.
 The default is the standard claim `sub`.
 
 ### `auth-oidc-issuer-url`
@@ -147,7 +147,7 @@ The default is the standard claim `sub`.
     ```bash
     AUTH_OIDC_ISSUER-URL="https://quorum-key-manager.eu.auth0.com/.well-known/jwks.json"
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/JWT.md), URL of the OpenID Connect server.
+When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), URL of the OpenID Connect server.
 You must use this option with [--auth-oidc-ca-cert](#auth-oidc-ca-cert).
 
 ### `auth-tls-ca`

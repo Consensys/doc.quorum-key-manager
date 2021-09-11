@@ -54,7 +54,7 @@ nav:
         - Build from source: Get-Started/Build-From-Source.md
     - How to:
         - Authenticate requests:
-            - With JSON web tokens: HowTo/Authenticate/JWT.md
+            - With OpenID Connect: HowTo/Authenticate/OIDC.md
             - With TLS: HowTo/Authenticate/TLS.md
             - With API keys: HowTo/Authenticate/API-Key.md
         - Use a manifest file:

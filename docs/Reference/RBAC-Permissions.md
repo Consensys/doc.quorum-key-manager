@@ -4,7 +4,7 @@ description: Role-based access control permissions
 
 # Role-based access control permissions
 
-The following tables list the permissions for [role-based access control](../Concepts/Authentication.md#role-based-access-control).
+The following tables list the permissions for [role-based access control](../Concepts/Authorization.md#role-based-access-control).
 Each permission has a list of allowed [REST endpoints](Rest.md).
 
 ## Ethereum accounts
