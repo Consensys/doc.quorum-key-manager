@@ -14,7 +14,7 @@ or [resource-based access control](#resource-based-access-control).
 
 ### Action
 
-An action is a functionality of your application to restrict to some users.
+An action is a functionality of your application to be restricted to authorized users.
 For example, read, create, sign, encrypt, delete, and destroy.
 
 ### Resource
@@ -25,12 +25,12 @@ QKM currently has the following resources:
 
 | Name               | Description                                                         |
 | :----------------: | :-----------------------------------------------------------------: |
-| Alias              | A representation of an external public key. For example, a [Tessera](https://docs.tessera.consensys.net/en/stable/) address. |
-| Ethereum account   | A cryptographic key allowing interaction with the Ethereum network. |
-| Key                | A cryptographic key.                                                |
-| [Node](Nodes.md)   | A representation of an underlying blockchain node.                  |
 | Secret             | A key-value element stored in a secure vault system.                |
-| [Store](Stores.md) | A set of secrets, keys, or Eth1 accounts.                           |
+| Key                | A cryptographic key.                                                |
+| Ethereum account   | A cryptographic key allowing interaction with the Ethereum network. |
+| [Store](Stores.md) | A set of secrets, keys, or Ethereum accounts.                       |
+| [Node](Nodes.md)   | A representation of an underlying blockchain node.                  |
+| Alias              | A representation of an external public key. For example, a [Tessera](https://docs.tessera.consensys.net/en/stable/) address. |
 
 ### Tenant
 
