@@ -9,14 +9,14 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 
 ## Ethereum accounts
 
-| Name                 | Description                                      | Allowed endpoints                    |
-| :------------------: | :----------------------------------------------: | :----------------------------------: |
-| `read:ethAccount`    | Allows reading operations over Ethereum accounts | Get, list, get deleted, list deleted |
-| `create:ethAccount`  | Allows creating Ethereum accounts                | Create, import, update               |
-| `delete:ethAccount`  | Allows soft-deleting Ethereum accounts           | Delete, restore                      |
-| `destroy:ethAccount` | Allows permanently deleting Ethereum accounts    | Delete, restore, destroy             |
-| `sign:ethAccount`    | Allows signing and verifying signatures          | *All sign endpoints*, EC recover     |
-| `encrypt:ethAccount` | Allows encryption and decryption                 | Encrypt, decrypt                     |
+| Name               | Description                                      | Allowed endpoints                    |
+| :----------------: | :----------------------------------------------: | :----------------------------------: |
+| `read:ethereum`    | Allows reading operations over Ethereum accounts | Get, list, get deleted, list deleted |
+| `create:ethereum`  | Allows creating Ethereum accounts                | Create, import, update               |
+| `delete:ethereum`  | Allows soft-deleting Ethereum accounts           | Delete, restore                      |
+| `destroy:ethereum` | Allows permanently deleting Ethereum accounts    | Delete, restore, destroy             |
+| `sign:ethereum`    | Allows signing and verifying signatures          | *All sign endpoints*, EC recover     |
+| `encrypt:ethereum` | Allows encryption and decryption                 | Encrypt, decrypt                     |
 
 ## Keys
 

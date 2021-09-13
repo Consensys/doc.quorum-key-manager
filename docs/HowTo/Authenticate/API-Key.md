@@ -18,9 +18,9 @@ when starting QKM.
 The API key file is a CSV file with four columns:
 
 - sha256(api-key)
-- username
+- username and optional [tenant](../../Concepts/Authorization.md#tenant)
 - [permissions](../../Reference/RBAC-Permissions.md)
-- group names
+- [roles](../../Concepts/Authorization.md#role)
 
 Each CSV line must be a unique API key and all API keys must be in UUID V4 format.
 

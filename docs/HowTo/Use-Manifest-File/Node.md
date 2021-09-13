@@ -13,7 +13,7 @@ Use the following fields to configure one or more nodes:
 - `kind`: *string* - the string `Node`
 - `version`: *string* - node version
 - `name`: *string* - name of the node
-- `alowedTenants`: *array* of *strings* - list of allowed tenants for this node when using
+- `alowedTenants`: *array* of *strings* - (optional) list of allowed tenants for this node when using
   [resource-based access control](../../Concepts/Authorization.md#resource-based-access-control)
 - `specs`: *object* - configuration object to connect to various endpoints, with the following fields for each endpoint:
     - `rpc` or `tessera`: (field name is the name of the endpoint)

@@ -19,7 +19,7 @@ Use the following fields to configure one or more [secret stores](../../Concepts
 - `kind`: *string* - type of secret store (`AKVSecrets`, `AWSSecrets`, `HashicorpSecrets`)
 - `version`: *string* - store version
 - `name`: *string* - name of the store
-- `alowedTenants`: *array* of *strings* - list of allowed tenants for this store when using
+- `alowedTenants`: *array* of *strings* - (optional) list of allowed tenants for this store when using
   [resource-based access control](../../Concepts/Authorization.md#resource-based-access-control)
 - `specs`: *object* - [configuration object to connect to an underlying vault](#vault-configuration).
 
@@ -44,7 +44,7 @@ Use the following fields to configure one or more [key stores](../../Concepts/St
 - `kind`: *string* - type of key store (`AKVKeys`, `AWSKeys`, `HashicorpKeys`, `LocalKeys`)
 - `version`: *string* - store version
 - `name`: *string* - name of the store
-- `alowedTenants`: *array* of *strings* - list of allowed tenants for this store when using
+- `alowedTenants`: *array* of *strings* - (optional) list of allowed tenants for this store when using
   [resource-based access control](../../Concepts/Authorization.md#resource-based-access-control)
 - `specs`: *object* - [configuration object to connect to an underlying vault](#vault-configuration).
 
@@ -86,7 +86,7 @@ Use the following fields to configure one or more [Ethereum stores](../../Concep
 - `kind`: *string* - the string `Ethereum`
 - `version`: *string* - store version
 - `name`: *string* - name of the store
-- `alowedTenants`: *array* of *strings* - list of allowed tenants for this store when using
+- `alowedTenants`: *array* of *strings* - (optional) list of allowed tenants for this store when using
   [resource-based access control](../../Concepts/Authorization.md#resource-based-access-control)
 - `specs`: *object* - configuration object containing any valid `keystore` (`AwsKeys`, `AzureKeys`, or `HashicorpKeys`),
   and the `specs` fields for that key store, as shown in the following example

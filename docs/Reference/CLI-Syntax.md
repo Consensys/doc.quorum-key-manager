@@ -250,6 +250,75 @@ Host to expose HTTP service.
 Port to expose HTTP service.
 The default is 8080.
 
+### `https-enable`
+
+=== "Syntax"
+
+    ```bash
+    --https-enable
+    ```
+
+=== "Example"
+
+    ```bash
+    --https-enable
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    HTTPS_ENABLE=true
+    ```
+
+Enable HTTPS server.
+This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
+
+### `https-server-cert`
+
+=== "Syntax"
+
+    ```bash
+    --https-server-cert=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --https-server-cert=tls.crt
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    HTTPS_SERVER_CERT="tls.crt"
+    ```
+
+Path to TLS server certificate.
+This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
+
+### `https-server-key`
+
+=== "Syntax"
+
+    ```bash
+    --https-server-key=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --https-server-key=tls.key
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    HTTPS_SERVER_KEY="tls.key"
+    ```
+
+Path to TLS server key.
+This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
+
 ### `log-format`
 
 === "Syntax"
