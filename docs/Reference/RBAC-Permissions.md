@@ -10,7 +10,7 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 ## Ethereum accounts
 
 | Name               | Description                                      | Allowed endpoints                    |
-| :----------------: | :----------------------------------------------: | :----------------------------------: |
+| :----------------- | :----------------------------------------------- | :----------------------------------- |
 | `read:ethereum`    | Allows reading operations over Ethereum accounts | Get, list, get deleted, list deleted |
 | `create:ethereum`  | Allows creating Ethereum accounts                | Create, import, update               |
 | `delete:ethereum`  | Allows soft-deleting Ethereum accounts           | Delete, restore                      |
@@ -21,7 +21,7 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 ## Keys
 
 | Name          | Description                             | Allowed endpoints                    |
-| :-----------: | :-------------------------------------: | :----------------------------------: |
+| :------------ | :-------------------------------------- | :----------------------------------- |
 | `read:key`    | Allows reading operations over keys     | Get, list, get deleted, list deleted |
 | `create:key`  | Allows creating keys                    | Create, import, update               |
 | `delete:key`  | Allows soft-deleting keys               | Delete, restore                      |
@@ -32,14 +32,14 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 ## Nodes
 
 | Name          | Description                          | Allowed endpoints                    |
-| :-----------: | :----------------------------------: | :----------------------------------: |
+| :------------ | :----------------------------------- | :----------------------------------- |
 | `read:nodes`  | Allows reading operations over nodes | Get, list, get deleted, list deleted |
 | `proxy:nodes` | Allows creating nodes                | Create, update                       |
 
 ## Secrets
 
 | Name             | Description                            | Allowed endpoints                    |
-| :--------------: | :------------------------------------: | :----------------------------------: |
+| :--------------- | :------------------------------------- | :----------------------------------- |
 | `read:secret`    | Allows reading operations over secrets | Get, list, get deleted, list deleted |
 | `set:secret`     | Allows creating secrets                | Set, update                          |
 | `delete:secret`  | Allows soft-deleting secrets           | Delete, restore                      |
