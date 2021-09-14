@@ -37,6 +37,7 @@ Quorum Key Manager is compatible with GoQuorum, Hyperledger Besu, Tessera, and C
 
 - Supports public and private Ethereum networks.
 - Supports signing public and private transactions.
+- Supports [EIP-1559] transactions.
 - Supports signing [Ethereum messages] and [typed data].
 - Supports different elliptic curves, such as BN254 and SECP256K1; and signing algorithms, such as ECDSA and EDDSA.
 - Supports secrets versioning.
@@ -45,3 +46,4 @@ Quorum Key Manager is compatible with GoQuorum, Hyperledger Besu, Tessera, and C
 [BSL 1.1 license]: https://mariadb.com/bsl11/
 [typed data]: https://eips.ethereum.org/EIPS/eip-712
 [Ethereum messages]: https://eips.ethereum.org/EIPS/eip-191
+[EIP-1559]: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md
