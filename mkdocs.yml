@@ -53,10 +53,10 @@ nav:
         - Run Quorum Key Manager from Docker image: Get-Started/Use-Docker.md
         - Build from source: Get-Started/Build-From-Source.md
     - How to:
-        - Authenticate requests:
-            - With OpenID Connect: HowTo/Authenticate/OIDC.md
-            - With TLS: HowTo/Authenticate/TLS.md
-            - With API keys: HowTo/Authenticate/API-Key.md
+        - Authenticate user requests:
+            - Use OpenID Connect: HowTo/Authenticate/OIDC.md
+            - Use TLS: HowTo/Authenticate/TLS.md
+            - Use API keys: HowTo/Authenticate/API-Key.md
         - Use a manifest file:
             - Overview: HowTo/Use-Manifest-File/Overview.md
             - Add a store: HowTo/Use-Manifest-File/Store.md
@@ -66,8 +66,8 @@ nav:
         - Architecture: Concepts/ArchitectureOverview.md
         - Stores: Concepts/Stores.md
         - Nodes: Concepts/Nodes.md
-        - Authentication: Concepts/Authentication.md
-        - Authorization: Concepts/Authorization.md
+        - User authentication: Concepts/Authentication.md
+        - User authorization: Concepts/Authorization.md
     - Tutorials:
         - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
         - Sign with EDDSA and BN254: Tutorials/EddsaBN254Sig.md

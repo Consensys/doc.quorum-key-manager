@@ -2,7 +2,7 @@
 description: How to authenticate QKM using TLS.
 ---
 
-# Authenticate with TLS
+# Authenticate using TLS
 
 You can [authenticate](../../Concepts/Authentication.md#authentication) incoming Quorum Key Manager (QKM) requests using TLS.
 
@@ -16,6 +16,8 @@ option.
     ```bash
     key-manager run --https-enable --https-server-cert=tls.crt --https-server-key=tls.key --auth-tls-ca=ca.crt --manifest-path=/config/default.yml
     ```
+
+## TLS certificate
 
 The CA certificate must contain one or more CAs to validate client certificates presented to QKM.
 

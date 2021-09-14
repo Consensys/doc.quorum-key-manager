@@ -2,13 +2,26 @@
 description: Authorization concept page
 ---
 
-# Authorization
+# User authorization
 
 After Quorum Key Manager (QKM) [authenticates](Authentication.md) an incoming request, it submits the request to the
 targeted service which performs authorization checks based on request context before performing service operations.
 
 The authorization process restricts system access through [role-based access control](#role-based-access-control)
 or [resource-based access control](#resource-based-access-control).
+
+## Role-based access control
+
+Role-based access control (RBAC) restricts [actions](#action) over [resources](#resource) to authorized users.
+Access is specified by [roles](#role) assigned to users, using a [manifest file](../HowTo/Use-Manifest-File/Role.md) or
+an [identity provider](https://auth0.com/docs/authorization/rbac/roles/create-roles).
+
+See the [full list of RBAC permissions](../Reference/RBAC-Permissions.md).
+
+## Resource-based access control
+
+Resource-based access control restricts access to [resources](#resource) to authorized users.
+Access is specified by allowed [tenants](#tenant) for each resource, using a [manifest file](../HowTo/Use-Manifest-File/Overview.md).
 
 ## Terminology
 
@@ -49,16 +62,3 @@ A permission is an authorization of an [action](#action) over a [resource](#reso
 A role is a named set of [permissions](#permission) defined in a [manifest file](../HowTo/Use-Manifest-File/Role.md).
 Alternatively, you can [use Auth0 to specify roles](https://auth0.com/docs/authorization/rbac/roles/create-roles) and
 attach permissions to your token.
-
-## Role-based access control
-
-Role-based access control (RBAC) restricts [actions](#action) over [resources](#resource) to authorized users.
-Access is specified by [roles](#role) assigned to users, using a [manifest file](../HowTo/Use-Manifest-File/Role.md) or
-an [identity provider](https://auth0.com/docs/authorization/rbac/roles/create-roles).
-
-See the [full list of RBAC permissions](../Reference/RBAC-Permissions.md).
-
-## Resource-based access control
-
-Resource-based access control restricts access to [resources](#resource) to authorized users.
-Access is specified by allowed [tenants](#tenant) for each resource, using a [manifest file](../HowTo/Use-Manifest-File/Overview.md).
