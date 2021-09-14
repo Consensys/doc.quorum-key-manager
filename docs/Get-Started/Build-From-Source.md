@@ -27,6 +27,17 @@ After cloning, go to the `quorum-key-manager` directory:
 cd quorum-key-manager
 ```
 
+!!! note
+
+    If using macOS, open `Makefile` and remove `@GOOS=linux GOARCH=amd64` under `gobuild`:
+
+    ```
+    ...
+    gobuild:
+        go build -o ./build/bin/key-manager
+    ...
+    ```
+
 Install the project vendors:
 
 ```bash
