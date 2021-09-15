@@ -62,7 +62,7 @@ When using [API key authentication](../HowTo/Authenticate/API-Key.md), path to t
 
 When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), path to the certificate authority (CA) key for
 the OpenID server.
-You must use this option with [--auth-oidc-issuer-url](#auth-oidc-issuer-url).
+You must use this option with [`--auth-oidc-issuer-url`](#auth-oidc-issuer-url).
 
 ### `auth-oidc-claim-permissions`
 
@@ -154,7 +154,7 @@ The default is the standard claim `sub`.
     ```
 
 When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), URL of the OpenID Connect server.
-You must use this option with [--auth-oidc-ca-cert](#auth-oidc-ca-cert).
+You must use this option with [`--auth-oidc-ca-cert`](#auth-oidc-ca-cert).
 
 ### `auth-tls-ca`
 
@@ -245,7 +245,7 @@ The default is `127.0.0.1`.
     DB_KEEPALIVE="1m0s"
     ```
 
-Number of seconds after which a TCP `keepalive` message should be sent.
+Number of seconds before the client sends a TCP `keepalive` message.
 The default is `1m0s`.
 
 ### `db-password`
@@ -291,7 +291,7 @@ The default is `postgres`.
     DB_POOL_TIMEOUT="30s"
     ```
 
-Number of seconds for which the client waits for a free connection if all connections are busy.
+Number of seconds the client waits for a free connection if all connections are busy.
 The default is `30s`.
 
 ### `db-poolsize`
