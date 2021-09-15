@@ -17,7 +17,7 @@ A Docker image is provided to run Quorum Key Manager (QKM) in a Docker container
 
 ### Run Quorum Key Manager
 
-Download the latest QKM [Docker compose file](https://github.com/ConsenSys/quorum-key-manager/blob/main/docker-compose.latest.yml).
+Download the latest QKM [Docker compose file](https://github.com/ConsenSys/quorum-key-manager/blob/main/docker-compose.yml).
 
 Specify a path to your [manifest file or folder](../HowTo/Use-Manifest-File/Overview.md) in an environment variable:
 
