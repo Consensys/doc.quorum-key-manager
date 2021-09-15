@@ -4,21 +4,29 @@ description: Run Quorum Key Manager from Docker image
 
 # Run Quorum Key Manager from Docker image
 
-A Docker image is provided to run Quorum Key Manager in a Docker container.
+Use the provided Docker image to run Quorum Key Manager (QKM) in a Docker container without installing QKM.
 
 ## Prerequisites
 
-- [Docker](https://docs.docker.com/install/)
+- [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
 - MacOS or Linux
 
     !!! Important
 
         The Docker image does not run on Windows.
 
-## Run Docker image
+### Run Quorum Key Manager
 
-Run Quorum Key Manager on Docker with the following command:
+Download the latest QKM [Docker compose file](https://github.com/ConsenSys/quorum-key-manager/blob/main/docker-compose.yml).
+
+Specify a path to your [manifest file or folder](../HowTo/Use-Manifest-File/Overview.md) in an environment variable:
 
 ```bash
-docker run -it --name quorum-key-manager -v type=bind,source="$(pwd)"/deps/config,target=/manifests docker.consensys.net/pub/quorum-key-manager:latest run --manifest-path=/manifests
+export HOST_MANIFEST_PATH=<PATH-TO-MANIFEST-FILE>
+```
+
+Start QKM using Docker Compose:
+
+```bash
+docker-compose -f docker-compose.latest.yml up key-manager
 ```

@@ -18,6 +18,167 @@ You can specify Quorum Key Manager options:
 
 - As environment variables.
 
+### `auth-api-key-file`
+
+=== "Syntax"
+
+    ```bash
+    --auth-api-key-file=<FILE>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-api-key-file=api_key_file.csv
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_API_KEY_FILE="api_key_file.csv"
+    ```
+
+When using [API key authentication](../HowTo/Authenticate/API-Key.md), path to the API key CSV file.
+
+### `auth-oidc-ca-cert`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-ca-cert=<FILE>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-ca-cert=ca.key
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_CA_CERT="ca.key"
+    ```
+
+When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), path to the certificate authority (CA) key for
+the OpenID server.
+You must use this option with [--auth-oidc-issuer-url](#auth-oidc-issuer-url).
+
+### `auth-oidc-claim-permissions`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-claim-permissions=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-claim-permissions="scope"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_CLAIM_PERMISSIONS="scope"
+    ```
+
+When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract [permissions](RBAC-Permissions.md).
+The default is the standard scope `scope`.
+
+### `auth-oidc-claim-roles`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-claim-roles=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-claim-roles="qkm.roles"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_CLAIM_ROLES="qkm.roles"
+    ```
+
+When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract roles.
+The default is `qkm.roles`.
+
+### `auth-oidc-claim-username`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-claim-username=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-claim-username="sub"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_CLAIM_USERNAME="sub"
+    ```
+
+When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract the username.
+The default is the standard claim `sub`.
+
+### `auth-oidc-issuer-url`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-issuer-url=<URL>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-issuer-url="https://quorum-key-manager.eu.auth0.com/.well-known/jwks.json"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_ISSUER-URL="https://quorum-key-manager.eu.auth0.com/.well-known/jwks.json"
+    ```
+
+When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), URL of the OpenID Connect server.
+You must use this option with [--auth-oidc-ca-cert](#auth-oidc-ca-cert).
+
+### `auth-tls-ca`
+
+=== "Syntax"
+
+    ```bash
+    --auth-tls-ca=<FILE>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-tls-ca=ca.crt
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_TLS_CA="ca.crt"
+    ```
+
+When using [TLS authentication](../HowTo/Authenticate/TLS.md), path to the certificate authority (CA) certificate for
+the TLS server.
+
 ### `db-database`
 
 === "Syntax"
@@ -195,7 +356,7 @@ The default is `5432`.
 === "Environment variable"
 
     ```bash
-    DB_PORT="require"
+    DB_SSLMODE="require"
     ```
 
 TLS/SSL mode to connect to database (one of `require`, `disable`, `verify-ca`, and `verify-full`).
@@ -367,6 +528,75 @@ Host to expose HTTP service.
 
 Port to expose HTTP service.
 The default is `8080`.
+
+### `https-enable`
+
+=== "Syntax"
+
+    ```bash
+    --https-enable
+    ```
+
+=== "Example"
+
+    ```bash
+    --https-enable
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    HTTPS_ENABLE=true
+    ```
+
+Enable HTTPS server.
+This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
+
+### `https-server-cert`
+
+=== "Syntax"
+
+    ```bash
+    --https-server-cert=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --https-server-cert=tls.crt
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    HTTPS_SERVER_CERT="tls.crt"
+    ```
+
+Path to TLS server certificate.
+This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
+
+### `https-server-key`
+
+=== "Syntax"
+
+    ```bash
+    --https-server-key=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --https-server-key=tls.key
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    HTTPS_SERVER_KEY="tls.key"
+    ```
+
+Path to TLS server key.
+This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
 
 ### `log-format`
 
