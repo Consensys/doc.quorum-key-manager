@@ -4,7 +4,7 @@ description: Run Quorum Key Manager from Docker image
 
 # Run Quorum Key Manager from Docker image
 
-A Docker image is provided to run Quorum Key Manager (QKM) in a Docker container.
+Use the provided Docker image to run Quorum Key Manager (QKM) in a Docker container without installing QKM.
 
 ## Prerequisites
 
