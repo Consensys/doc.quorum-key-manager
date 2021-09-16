@@ -28,5 +28,5 @@ export HOST_MANIFEST_PATH=<PATH-TO-MANIFEST-FILE>
 Start QKM using Docker Compose:
 
 ```bash
-docker-compose -f docker-compose.latest.yml up key-manager
+docker-compose -f docker-compose.yml up key-manager
 ```
