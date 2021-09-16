@@ -36,6 +36,7 @@ You can specify Quorum Key Manager options:
 
     ```bash
     AUTH_API_KEY_FILE="api_key_file.csv"
+    ```
 
 When using [API key authentication](../HowTo/Authenticate/API-Key.md), path to the API key CSV file.
 
@@ -57,10 +58,11 @@ When using [API key authentication](../HowTo/Authenticate/API-Key.md), path to t
 
     ```bash
     AUTH_OIDC_CA_CERT="ca.key"
+    ```
 
 When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), path to the certificate authority (CA) key for
 the OpenID server.
-You must use this option with [--auth-oidc-issuer-url](#auth-oidc-issuer-url).
+You must use this option with [`--auth-oidc-issuer-url`](#auth-oidc-issuer-url).
 
 ### `auth-oidc-claim-permissions`
 
@@ -80,6 +82,7 @@ You must use this option with [--auth-oidc-issuer-url](#auth-oidc-issuer-url).
 
     ```bash
     AUTH_OIDC_CLAIM_PERMISSIONS="scope"
+    ```
 
 When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract [permissions](RBAC-Permissions.md).
 The default is the standard scope `scope`.
@@ -102,6 +105,7 @@ The default is the standard scope `scope`.
 
     ```bash
     AUTH_OIDC_CLAIM_ROLES="qkm.roles"
+    ```
 
 When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract roles.
 The default is `qkm.roles`.
@@ -124,6 +128,7 @@ The default is `qkm.roles`.
 
     ```bash
     AUTH_OIDC_CLAIM_USERNAME="sub"
+    ```
 
 When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract the username.
 The default is the standard claim `sub`.
@@ -146,9 +151,10 @@ The default is the standard claim `sub`.
 
     ```bash
     AUTH_OIDC_ISSUER-URL="https://quorum-key-manager.eu.auth0.com/.well-known/jwks.json"
+    ```
 
 When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), URL of the OpenID Connect server.
-You must use this option with [--auth-oidc-ca-cert](#auth-oidc-ca-cert).
+You must use this option with [`--auth-oidc-ca-cert`](#auth-oidc-ca-cert).
 
 ### `auth-tls-ca`
 
@@ -168,9 +174,282 @@ You must use this option with [--auth-oidc-ca-cert](#auth-oidc-ca-cert).
 
     ```bash
     AUTH_TLS_CA="ca.crt"
+    ```
 
 When using [TLS authentication](../HowTo/Authenticate/TLS.md), path to the certificate authority (CA) certificate for
 the TLS server.
+
+### `db-database`
+
+=== "Syntax"
+
+    ```bash
+    --db-database=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-database="postgres"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_DATABASE="postgres"
+    ```
+
+Target database name.
+The default is `postgres`.
+
+### `db-host`
+
+=== "Syntax"
+
+    ```bash
+    --db-host=<HOST>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-host=127.0.0.1
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_HOST="127.0.0.1"
+    ```
+
+Database host.
+The default is `127.0.0.1`.
+
+### `db-keepalive`
+
+=== "Syntax"
+
+    ```bash
+    --db-keepalive=<DURATION>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-keepalive=1m0s
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_KEEPALIVE="1m0s"
+    ```
+
+Number of seconds before the client sends a TCP `keepalive` message.
+The default is `1m0s`.
+
+### `db-password`
+
+=== "Syntax"
+
+    ```bash
+    --db-password=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-password="postgres"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_PASSWORD="postgres"
+    ```
+
+Database user password.
+The default is `postgres`.
+
+### `db-pool-timeout`
+
+=== "Syntax"
+
+    ```bash
+    --db-pool-timeout=<DURATION>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-pool-timeout=30s
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_POOL_TIMEOUT="30s"
+    ```
+
+Number of seconds the client waits for a free connection if all connections are busy.
+The default is `30s`.
+
+### `db-poolsize`
+
+=== "Syntax"
+
+    ```bash
+    --db-poolsize=<INTEGER>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-poolsize=20
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_POOLSIZE="20"
+    ```
+
+Maximum number of connections on the database.
+
+### `db-port`
+
+=== "Syntax"
+
+    ```bash
+    --db-port=<PORT>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-port=6174
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_PORT="6174"
+    ```
+
+Database port.
+The default is `5432`.
+
+### `db-sslmode`
+
+=== "Syntax"
+
+    ```bash
+    --db-sslmode=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-sslmode="require"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_SSLMODE="require"
+    ```
+
+TLS/SSL mode to connect to database (one of `require`, `disable`, `verify-ca`, and `verify-full`).
+The default is `disable`.
+
+### `db-tls-ca`
+
+=== "Syntax"
+
+    ```bash
+    --db-tls-ca=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-tls-ca=tls_ca.pem
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_TLS_CA="tls_ca.pem"
+    ```
+
+Path to TLS certificate authority (CA) in PEM format.
+
+### `db-tls-cert`
+
+=== "Syntax"
+
+    ```bash
+    --db-tls-cert=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-tls-cert=tls_cert.pem
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_TLS_CERT="tls_cert.pem"
+    ```
+
+Path to TLS certificate to connect to database in PEM format.
+
+### `db-tls-key`
+
+=== "Syntax"
+
+    ```bash
+    --db-tls-key=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-tls-key=tls_key.pem
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_TLS_KEY="tls_key.pem"
+    ```
+
+Path to TLS private key to connect to database in PEM format.
+
+### `db-user`
+
+=== "Syntax"
+
+    ```bash
+    --db-user=<STRING>
+    ```
+
+=== "Example"
+
+    ```bash
+    --db-user="postgres"
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    DB_USER="postgres"
+    ```
+
+Database user.
+The default is `postgres`.
 
 ### `health-port`
 
@@ -193,17 +472,17 @@ the TLS server.
     ```
 
 Port to expose Health HTTP service.
-The default is 8081.
+The default is `8081`.
 
 ### `help`
 
 === "Syntax"
 
     ```bash
-    -h, --help
+    -h, --help, [command] --help
     ```
 
-Print help information and exit.
+Print help information and exit, or if a command is specified, print more information about the command.
 
 ### `http-host`
 
@@ -241,14 +520,14 @@ Host to expose HTTP service.
     --http-port=6174
     ```
 
-=== "Environment Variable"
+=== "Environment variable"
 
     ```bash
     HTTP_PORT="6174"
     ```
 
 Port to expose HTTP service.
-The default is 8080.
+The default is `8080`.
 
 ### `https-enable`
 
