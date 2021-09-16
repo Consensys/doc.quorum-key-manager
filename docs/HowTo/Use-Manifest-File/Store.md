@@ -50,8 +50,9 @@ Use the following fields to configure one or more [key stores](../../Concepts/St
 
 !!! note
 
-    If using a `LocalKeys` store, specify any valid `secretstore` (`AWSSecret`, `AKVSecret`, or `HashicorpSecret`) under
-    `specs`, and provide the `specs` fields for that secret store, as shown in the following example.
+    - If using a `HashicorpKeys` store, you must install the [HashiCorp Vault Plugin](https://github.com/ConsenSys/orchestrate-hashicorp-vault-plugin).
+    - If using a `LocalKeys` store, specify any valid `secretstore` (`AWSSecret`, `AKVSecret`, or `HashicorpSecret`) under
+      `specs`, and provide the `specs` fields for that secret store, as shown in the following example.
 
 !!! Example "Example key store manifest file"
 
