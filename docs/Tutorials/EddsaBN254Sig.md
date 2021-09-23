@@ -1,11 +1,11 @@
 ---
-description: Sign with eddsa and bn254
+description: Sign with eddsa and babyjubjub
 ---
 
-# Sign a transaction with EDDSA and BN254
+# Sign a transaction with EDDSA and Baby Jubjub
 
 This tutorial walks you through signing an Ethereum transaction with Quorum Key Manager (QKM) using the EDDSA signing
-algorithm and BN254 elliptic curve.
+algorithm and Baby Jubjub elliptic curve (also referred to as the BN254 twisted Edwards curve).
 
 ## Prerequisites
 
@@ -44,12 +44,12 @@ algorithm and BN254 elliptic curve.
     key-manager run --manifest-path=<PATH-TO-MANIFEST-FILE>
     ```
 
-3. Create an Ethereum account using EDDSA and BN254:
+3. Create an Ethereum account using EDDSA and Baby Jubjub:
 
     === "curl HTTP request"
 
         ```bash
-        curl --request POST 'http://localhost:8080/stores/hashicorp-keys/keys/bn254-key' --header 'Content-Type: application/json' --data-raw '{"curve": "bn254", "signingAlgorithm": "eddsa"}'
+        curl --request POST 'http://localhost:8080/stores/hashicorp-keys/keys/bn254-key' --header 'Content-Type: application/json' --data-raw '{"curve": "babyjubjub", "signingAlgorithm": "eddsa"}'
         ```
 
     === "JSON result"
@@ -58,7 +58,7 @@ algorithm and BN254 elliptic curve.
         {
             "id": "bn254-key",
             "publicKey": "Cjix/fS3WdqKGKabagBNYwcClan5aImoFpnjSF0cqJs=",
-            "curve": "bn254",
+            "curve": "babyjubjub",
             "signingAlgorithm": "eddsa",
             "disabled": false,
             "createdAt": "2021-09-09T11:18:51.5877561Z",
@@ -97,5 +97,5 @@ algorithm and BN254 elliptic curve.
     === "curl HTTP request"
 
         ```bash
-        curl --request POST 'http://localhost:8080/stores/hashicorp-keys/keys/verify-signature' --header 'Content-Type: application/json' --data-raw '{"curve": "bn254", "signingAlgorithm": "eddsa", "data": "bXkgc2lnbmVkIG1lc3NhZ2U=", "publicKey": "yhUiySkg/cKbiN8soKZ5YO0GXHqzx8iycnABzYMPE5A=", "signature": "tjThYhKSFSKKvsR8Pji6EJ+FYAcf8TNUdAQnM7MSwZEEaPvFhpr1SuGpX5uOcYUrb3pBA8cLk8xcbKtvZ56qWA=="}'
+        curl --request POST 'http://localhost:8080/stores/hashicorp-keys/keys/verify-signature' --header 'Content-Type: application/json' --data-raw '{"curve": "babyjubjub", "signingAlgorithm": "eddsa", "data": "bXkgc2lnbmVkIG1lc3NhZ2U=", "publicKey": "yhUiySkg/cKbiN8soKZ5YO0GXHqzx8iycnABzYMPE5A=", "signature": "tjThYhKSFSKKvsR8Pji6EJ+FYAcf8TNUdAQnM7MSwZEEaPvFhpr1SuGpX5uOcYUrb3pBA8cLk8xcbKtvZ56qWA=="}'
         ```
