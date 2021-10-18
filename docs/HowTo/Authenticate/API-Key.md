@@ -29,7 +29,7 @@ Each CSV line must be a unique API key and all API keys must be in UUID V4 forma
 !!! example "Example API key file"
 
     ```
-    sha256(apiKey1),tenant1|username1,"*:secret,*:keys";"role-admin"
+    sha256(apiKey1),tenant1|username1,"*:secret,*:keys","role-admin"
     sha256(apiKey2),username2,"read:*","role-guest"
     ```
 
