@@ -2,9 +2,9 @@
 description: Quorum Key Manager command line interface reference
 ---
 
-# Quorum Key Manager command line
+# Quorum Key Manager command line options
 
-This reference describes the syntax of the Quorum Key Manager Command Line Interface (CLI) options.
+This reference describes the syntax of the Quorum Key Manager command line interface (CLI) options.
 
 ## Options
 
@@ -12,9 +12,9 @@ You can specify Quorum Key Manager options:
 
 - On the command line.
 
-  ```bash
-  key-manager run [OPTIONS]
-  ```
+    ```bash
+    key-manager run [OPTIONS]
+    ```
 
 - As environment variables.
 
@@ -38,7 +38,7 @@ You can specify Quorum Key Manager options:
     AUTH_API_KEY_FILE="api_key_file.csv"
     ```
 
-When using [API key authentication](../HowTo/Authenticate/API-Key.md), path to the API key CSV file.
+When using [API key authentication](../../HowTo/Authenticate/API-Key.md), path to the API key CSV file.
 
 ### `auth-oidc-ca-cert`
 
@@ -60,7 +60,7 @@ When using [API key authentication](../HowTo/Authenticate/API-Key.md), path to t
     AUTH_OIDC_CA_CERT="ca.key"
     ```
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), path to the certificate authority (CA) key for
+When using [OpenID Connect authentication](../../HowTo/Authenticate/OIDC.md), path to the certificate authority (CA) key for
 the OpenID server.
 You must use this option with [`--auth-oidc-issuer-url`](#auth-oidc-issuer-url).
 
@@ -84,7 +84,7 @@ You must use this option with [`--auth-oidc-issuer-url`](#auth-oidc-issuer-url).
     AUTH_OIDC_CLAIM_PERMISSIONS="scope"
     ```
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract [permissions](RBAC-Permissions.md).
+When using [OpenID Connect authentication](../../HowTo/Authenticate/OIDC.md), claim from which to extract [permissions](../RBAC-Permissions.md).
 The default is the standard scope `scope`.
 
 ### `auth-oidc-claim-roles`
@@ -107,7 +107,7 @@ The default is the standard scope `scope`.
     AUTH_OIDC_CLAIM_ROLES="qkm.roles"
     ```
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract roles.
+When using [OpenID Connect authentication](../../HowTo/Authenticate/OIDC.md), claim from which to extract roles.
 The default is `qkm.roles`.
 
 ### `auth-oidc-claim-username`
@@ -130,7 +130,7 @@ The default is `qkm.roles`.
     AUTH_OIDC_CLAIM_USERNAME="sub"
     ```
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), claim from which to extract the username.
+When using [OpenID Connect authentication](../../HowTo/Authenticate/OIDC.md), claim from which to extract the username.
 The default is the standard claim `sub`.
 
 ### `auth-oidc-issuer-url`
@@ -153,7 +153,7 @@ The default is the standard claim `sub`.
     AUTH_OIDC_ISSUER-URL="https://quorum-key-manager.eu.auth0.com/.well-known/jwks.json"
     ```
 
-When using [OpenID Connect authentication](../HowTo/Authenticate/OIDC.md), URL of the OpenID Connect server.
+When using [OpenID Connect authentication](../../HowTo/Authenticate/OIDC.md), URL of the OpenID Connect server.
 You must use this option with [`--auth-oidc-ca-cert`](#auth-oidc-ca-cert).
 
 ### `auth-tls-ca`
@@ -176,7 +176,7 @@ You must use this option with [`--auth-oidc-ca-cert`](#auth-oidc-ca-cert).
     AUTH_TLS_CA="ca.crt"
     ```
 
-When using [TLS authentication](../HowTo/Authenticate/TLS.md), path to the certificate authority (CA) certificate for
+When using [TLS authentication](../../HowTo/Authenticate/TLS.md), path to the certificate authority (CA) certificate for
 the TLS server.
 
 ### `db-database`
@@ -550,7 +550,7 @@ The default is `8080`.
     ```
 
 Enable HTTPS server.
-This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
+This is required when using [TLS authentication](../../HowTo/Authenticate/TLS.md).
 
 ### `https-server-cert`
 
@@ -573,7 +573,7 @@ This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
     ```
 
 Path to TLS server certificate.
-This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
+This is required when using [TLS authentication](../../HowTo/Authenticate/TLS.md).
 
 ### `https-server-key`
 
@@ -596,7 +596,7 @@ This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
     ```
 
 Path to TLS server key.
-This is required when using [TLS authentication](../HowTo/Authenticate/TLS.md).
+This is required when using [TLS authentication](../../HowTo/Authenticate/TLS.md).
 
 ### `log-format`
 
@@ -689,4 +689,4 @@ The default is `true`.
     MANIFEST_PATH="/config/default.yml"
     ```
 
-Path to [manifest file/folder](../HowTo/Use-Manifest-File/Overview.md) to configure key manager stores and nodes.
+Path to [manifest file/folder](../../HowTo/Use-Manifest-File/Overview.md) to configure key manager stores and nodes.

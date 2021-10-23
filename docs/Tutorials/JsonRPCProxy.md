@@ -43,7 +43,7 @@ Key Manager (QKM) as remote and secure storage for your wallets.
               addr: http://tessera1:9080
         ```
 
-2. Start QKM with the manifest file by using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option:
+2. Start QKM with the manifest file by using the [`--manifest-path`](../Reference/CLI/CLI-Syntax.md#manifest-path) option:
 
     ```bash
     key-manager run --manifest-path=<PATH-TO-MANIFEST-FILE>

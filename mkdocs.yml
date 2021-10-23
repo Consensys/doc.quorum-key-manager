@@ -72,7 +72,9 @@ nav:
         - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
         - Sign with EDDSA and BN254: Tutorials/EddsaBN254Sig.md
     - Reference:
-        - Command line options: Reference/CLI-Syntax.md
+        - Quorum Key Manager command line:
+            - Options: Reference/CLI/CLI-Syntax.md
+            - Subcommands: Reference/CLI/CLI-Subcommands.md
         - REST API methods: Reference/Rest.md
         - RBAC permissions: Reference/RBAC-Permissions.md
 

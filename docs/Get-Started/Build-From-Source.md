@@ -65,7 +65,7 @@ key-manager migrate up
 ```
 
 Start Quorum Key Manager specifying the path to a [manifest file or folder](../HowTo/Use-Manifest-File/Overview.md) and
-any other [options](../Reference/CLI-Syntax.md):
+any other [options](../Reference/CLI/CLI-Syntax.md):
 
 ```bash
 key-manager run --manifest-path=<PATH> [OPTIONS]
