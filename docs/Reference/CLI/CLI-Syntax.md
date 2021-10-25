@@ -4,11 +4,11 @@ description: Quorum Key Manager command line interface reference
 
 # Quorum Key Manager command line options
 
-This reference describes the syntax of the Quorum Key Manager command line interface (CLI) options.
+This reference describes the syntax of the Quorum Key Manager (QKM) command line interface (CLI) options.
 
 ## Options
 
-You can specify Quorum Key Manager options:
+You can specify QKM options:
 
 - On the command line.
 
