@@ -14,9 +14,9 @@ key-manager [SUBCOMMAND] [SUBCOMMAND OPTIONS]
 
 ## `import`
 
-Imports [Ethereum accounts](../../Concepts/Stores.md#ethereum-store), [keys](../../Concepts/Stores.md#key-store), or
-[secrets](../../Concepts/Stores.md#secret-store) from the specified store configured in the specified
-[manifest file](../../HowTo/Use-Manifest-File) into the local QKM database.
+[Imports Ethereum accounts, keys, or secrets](../../HowTo/Import-Resources.md) from the specified
+[store](../../Concepts/Stores.md) configured in the specified [manifest file](../../HowTo/Use-Manifest-File) into the
+local QKM database.
 
 You must specify the path of the manifest file using the `--manifest-path` option or the `MANIFEST_PATH` environment variable.
 

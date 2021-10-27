@@ -62,6 +62,7 @@ nav:
             - Add a store: HowTo/Use-Manifest-File/Store.md
             - Add a node: HowTo/Use-Manifest-File/Node.md
             - Add a role: HowTo/Use-Manifest-File/Role.md
+        - Import resources: HowTo/Import-Resources.md
     - Concepts:
         - Architecture: Concepts/ArchitectureOverview.md
         - Stores: Concepts/Stores.md
