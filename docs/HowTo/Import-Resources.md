@@ -4,8 +4,10 @@ description: How to import resources
 
 # Import resources
 
-You can import resources from a [store](../Concepts/Stores.md) into your local Quorum Key Manager (QKM) database using
-the [`import` subcommand](../Reference/CLI/CLI-Subcommands.md#import).
+If you have [Ethereum accounts](../Concepts/Stores.md#ethereum-store), [keys](../Concepts/Stores.md#key-store), or
+[secrets](../Concepts/Stores.md#secret-store) in a secure storage system, you can import these resources for use
+within Quorum Key Manager (QKM).
+Import resources from a store into your local QKM database using the [`import` subcommand](../Reference/CLI/CLI-Subcommands.md#import).
 
 Use `import ethereum` to import Ethereum accounts, `import keys` to import keys, and `import secrets` to import secrets.
 You can specify options [on the command line](#on-the-command-line) or [as environment variables](#as-environment-variables).
