@@ -5,9 +5,8 @@ description: How to import resources
 # Import resources
 
 If you have [Ethereum accounts](../Concepts/Stores.md#ethereum-store), [keys](../Concepts/Stores.md#key-store), or
-[secrets](../Concepts/Stores.md#secret-store) in a secure storage system, you can import these resources for use
-within Quorum Key Manager (QKM).
-Import resources from a store into your local QKM database using the [`import` subcommand](../Reference/CLI/CLI-Subcommands.md#import).
+[secrets](../Concepts/Stores.md#secret-store) in a secure storage system, you can import these resources into your local
+QKM database using the [`import` subcommand](../Reference/CLI/CLI-Subcommands.md#import).
 
 Use `import ethereum` to import Ethereum accounts, `import keys` to import keys, and `import secrets` to import secrets.
 You can specify options [on the command line](#on-the-command-line) or [as environment variables](#as-environment-variables).
@@ -19,8 +18,8 @@ You can specify options [on the command line](#on-the-command-line) or [as envir
 
 ## On the command line
 
-Specify the path to the manifest file on which the store is configured using the `--manifest-path` command line option.
-Specify the name of the store using the `--import-store-name` option.
+Specify the path to the manifest file in which the store is configured using the `--manifest-path` command line option,
+and the name of the store using the `--import-store-name` option.
 Include [any database options](../Reference/CLI/CLI-Syntax.md#db-database) (any options that begin with `--db-`) that
 apply to your local database.
 
