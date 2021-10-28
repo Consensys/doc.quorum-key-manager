@@ -5,8 +5,8 @@ description: How to import resources
 # Import resources
 
 If you have [Ethereum accounts](../Concepts/Stores.md#ethereum-store), [keys](../Concepts/Stores.md#key-store), or
-[secrets](../Concepts/Stores.md#secret-store) in a secure storage system, you can import these resources into your local
-QKM database using the [`import` subcommand](../Reference/CLI/CLI-Subcommands.md#import).
+[secrets](../Concepts/Stores.md#secret-store) in a secure storage system, you must import these resources into your local
+QKM database using the [`import` subcommand](../Reference/CLI/CLI-Subcommands.md#import) in order to use them.
 
 Use `import ethereum` to import Ethereum accounts, `import keys` to import keys, and `import secrets` to import secrets.
 You can specify options [on the command line](#on-the-command-line) or [as environment variables](#as-environment-variables).
