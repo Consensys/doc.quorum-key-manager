@@ -9,7 +9,7 @@ This reference describes the syntax of the Quorum Key Manager (QKM) command line
 You can specify QKM subcommands on the command line:
 
 ```bash
-key-manager [SUBCOMMAND] [SUBCOMMAND OPTIONS]
+key-manager [COMMAND] [SUBCOMMAND] [OPTIONS]
 ```
 
 ## `sync`

@@ -70,3 +70,8 @@ any other [options](../Reference/CLI/CLI-Syntax.md):
 ```bash
 key-manager run --manifest-path=<PATH> [OPTIONS]
 ```
+
+!!! note
+
+    If you have any resources in a [store](../Concepts/Stores.md), in order to use those resources you must [index](../HowTo/Index-Resources.md)
+    them after running all database migrations and before or after starting Quorum Key Manager.
