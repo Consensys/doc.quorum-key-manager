@@ -73,5 +73,6 @@ key-manager run --manifest-path=<PATH> [OPTIONS]
 
 !!! note
 
-    If you have any resources in a [store](../Concepts/Stores.md), in order to use those resources you must [index](../HowTo/Index-Resources.md)
-    them after running all database migrations and before or after starting Quorum Key Manager.
+    If you have existing resources in a secure storage system (such as HashiCorp KV, AWS KMS, or Azure KV), in order to
+    use those resources you must [index](../HowTo/Index-Resources.md) them after running all database migrations and
+    before or after starting Quorum Key Manager.
