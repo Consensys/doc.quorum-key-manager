@@ -33,10 +33,11 @@ Locally [indexes resources](../../HowTo/Index-Resources.md) from a store.
 Indexes (adds references to) Ethereum accounts from the specified [Ethereum store](../../Concepts/Stores.md#ethereum-store)
 configured in the specified [manifest file](../../HowTo/Use-Manifest-File) into your local QKM database.
 
-You must specify the path of the manifest file using the `--manifest-path` option or the `MANIFEST_PATH` environment variable.
+You must specify:
 
-You must specify the name of the store from which to index the resources using the `--store-name` option or the
-`STORE_NAME` environment variable.
+- The path of the manifest file using the `--manifest-path` option or the `MANIFEST_PATH` environment variable.
+- The name of the store from which to index the resources using the `--store-name` option or the `STORE_NAME`
+  environment variable.
 
 You can include any [database options or environment variables](CLI-Syntax.md#db-database) (any options that begin with `--db-`).
 
@@ -57,10 +58,11 @@ You can include any [database options or environment variables](CLI-Syntax.md#db
 Indexes (adds references to) keys from the specified [key store](../../Concepts/Stores.md#key-store) configured in the
 specified [manifest file](../../HowTo/Use-Manifest-File) into your local QKM database.
 
-You must specify the path of the manifest file using the `--manifest-path` option or the `MANIFEST_PATH` environment variable.
+You must specify:
 
-You must specify the name of the store from which to index the resources using the `--store-name` option or the
-`STORE_NAME` environment variable.
+- The path of the manifest file using the `--manifest-path` option or the `MANIFEST_PATH` environment variable.
+- The name of the store from which to index the resources using the `--store-name` option or the `STORE_NAME`
+  environment variable.
 
 You can include any [database options or environment variables](CLI-Syntax.md#db-database) (any options that begin with `--db-`).
 
@@ -81,9 +83,10 @@ You can include any [database options or environment variables](CLI-Syntax.md#db
 Indexes (adds references to) secrets from the specified [secret store](../../Concepts/Stores.md#ethereum-store)
 configured in the specified [manifest file](../../HowTo/Use-Manifest-File) into your local QKM database.
 
-You must specify the path of the manifest file using the `--manifest-path` option or the `MANIFEST_PATH` environment variable.
+You must specify:
 
-You must specify the name of the store from which to index the resources using the `--store-name` option or the
-`STORE_NAME` environment variable.
+- The path of the manifest file using the `--manifest-path` option or the `MANIFEST_PATH` environment variable.
+- The name of the store from which to index the resources using the `--store-name` option or the `STORE_NAME`
+  environment variable.
 
 You can include any [database options or environment variables](CLI-Syntax.md#db-database) (any options that begin with `--db-`).

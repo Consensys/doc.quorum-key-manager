@@ -4,8 +4,8 @@ description: How to index resources
 
 # Index resources
 
-If you have [Ethereum accounts](../Concepts/Stores.md#ethereum-store), [keys](../Concepts/Stores.md#key-store), or
-[secrets](../Concepts/Stores.md#secret-store) in a secure storage system, you must index (reference) these resources in
+If you have existing [Ethereum accounts](../Concepts/Stores.md#ethereum-store), [keys](../Concepts/Stores.md#key-store),
+or [secrets](../Concepts/Stores.md#secret-store) in a secure storage system, you must index (reference) these resources in
 your local QKM database using the [`sync` subcommand](../Reference/CLI/CLI-Subcommands.md#sync) in order to use them.
 
 Use `sync ethereum` to index Ethereum accounts, `sync keys` to index keys, and `sync secrets` to index secrets.
@@ -26,7 +26,7 @@ apply to your local database.
 !!! example "Indexing keys from `hashicorp-keys` on the command line"
 
     ```bash
-    key-manager sync keys --manifest-path="/config/default.yml" --store-name="hashicorp-keys" --db-database="postgres" --db-host=127.0.0.1 --db-port=6174
+    key-manager sync keys --manifest-path="/config/default.yml" --store-name="hashicorp-keys" --db-port=8080
     ```
 
 ## As environment variables
