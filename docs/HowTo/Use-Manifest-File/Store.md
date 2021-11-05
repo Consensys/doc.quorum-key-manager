@@ -15,7 +15,7 @@ QKM supports the following store interfaces:
 !!! important
 
     If you have existing Ethereum accounts, keys, or secrets in a secure storage system, you must
-    [index](../HowTo/Index-Resources.md) them in your local QKM database in order to use them.
+    [index](../Index-Resources.md) them in your local QKM database in order to use them.
 
 ## Secret store
 
