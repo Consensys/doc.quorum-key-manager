@@ -38,7 +38,7 @@ algorithm and Baby Jubjub elliptic curve (also referred to as the BN254 twisted 
               addr: http://besu-node:8545
         ```
 
-2. Start QKM with the manifest file by using the [`--manifest-path`](../Reference/CLI-Syntax.md#manifest-path) option:
+2. Start QKM with the manifest file by using the [`--manifest-path`](../Reference/CLI/CLI-Syntax.md#manifest-path) option:
 
     ```bash
     key-manager run --manifest-path=<PATH-TO-MANIFEST-FILE>

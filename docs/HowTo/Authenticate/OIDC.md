@@ -15,14 +15,14 @@ Refer to the [OIDC documentation](https://openid.net/specs/openid-connect-core-1
 
 You can set the following options at QKM runtime to configure OIDC authentication.
 
-- [`--auth-oidc-issuer-url`](../../Reference/CLI-Syntax.md#auth-oidc-issuer-url) - URL of the OpenID Connect server.
-- [`--auth-oidc-ca-cert`](../../Reference/CLI-Syntax.md#auth-oidc-ca-cert) - Path to the certificate authority (CA) key for the OpenID server.
-  This option is mutually exclusive with [`--auth-oidc-issuer-url`](../../Reference/CLI-Syntax.md#auth-oidc-issuer-url).
-- [`--auth-oidc-claim-username`](../../Reference/CLI-Syntax.md#auth-oidc-claim-username) - Claim from which to extract the username.
+- [`--auth-oidc-issuer-url`](../../Reference/CLI/CLI-Syntax.md#auth-oidc-issuer-url) - URL of the OpenID Connect server.
+- [`--auth-oidc-ca-cert`](../../Reference/CLI/CLI-Syntax.md#auth-oidc-ca-cert) - Path to the certificate authority (CA) key for the OpenID server.
+  This option is mutually exclusive with [`--auth-oidc-issuer-url`](../../Reference/CLI/CLI-Syntax.md#auth-oidc-issuer-url).
+- [`--auth-oidc-claim-username`](../../Reference/CLI/CLI-Syntax.md#auth-oidc-claim-username) - Claim from which to extract the username.
   The default is `sub`.
-- [`--auth-oidc-claim-permissions`](../../Reference/CLI-Syntax.md#auth-oidc-claim-permissions) - Claim from which to extract permissions.
+- [`--auth-oidc-claim-permissions`](../../Reference/CLI/CLI-Syntax.md#auth-oidc-claim-permissions) - Claim from which to extract permissions.
   The default is `scope`.
-- [`--auth-oidc-claim-roles`](../../Reference/CLI-Syntax.md#auth-oidc-claim-roles) - Claim from which to extract roles.
+- [`--auth-oidc-claim-roles`](../../Reference/CLI/CLI-Syntax.md#auth-oidc-claim-roles) - Claim from which to extract roles.
   The default is `qkm.roles`.
 
 !!! example "Starting Quorum Key Manager with OIDC authentication"

@@ -64,8 +64,15 @@ Run all database migrations:
 key-manager migrate up
 ```
 
+!!! important
+
+    If you have existing [Ethereum accounts](../Concepts/Stores.md#ethereum-store), [keys](../Concepts/Stores.md#key-store),
+    or [secrets](../Concepts/Stores.md#secret-store) in a secure storage system (such as HashiCorp KV, AWS KMS, or Azure
+    KV), in order to use those resources you must [index](../HowTo/Index-Resources.md) them after running all database
+    migrations and before or after starting Quorum Key Manager.
+
 Start Quorum Key Manager specifying the path to a [manifest file or folder](../HowTo/Use-Manifest-File/Overview.md) and
-any other [options](../Reference/CLI-Syntax.md):
+any other [options](../Reference/CLI/CLI-Syntax.md):
 
 ```bash
 key-manager run --manifest-path=<PATH> [OPTIONS]

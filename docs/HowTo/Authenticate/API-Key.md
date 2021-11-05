@@ -6,7 +6,7 @@ description: How to authenticate QKM using an API key.
 
 You can [authenticate](../../Concepts/Authentication.md#authentication) incoming Quorum Key Manager (QKM) requests using API keys.
 
-Specify an API key file with the [`--auth-api-key-file`](../../Reference/CLI-Syntax.md#auth-api-key-file) command line option
+Specify an API key file with the [`--auth-api-key-file`](../../Reference/CLI/CLI-Syntax.md#auth-api-key-file) command line option
 when starting QKM.
 
 !!! example "Starting Quorum Key Manager with API key authentication"

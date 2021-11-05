@@ -62,6 +62,7 @@ nav:
             - Add a store: HowTo/Use-Manifest-File/Store.md
             - Add a node: HowTo/Use-Manifest-File/Node.md
             - Add a role: HowTo/Use-Manifest-File/Role.md
+        - Index resources: HowTo/Index-Resources.md
     - Concepts:
         - Architecture: Concepts/ArchitectureOverview.md
         - Stores: Concepts/Stores.md
@@ -72,7 +73,9 @@ nav:
         - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
         - Sign with EDDSA and BN254: Tutorials/EddsaBN254Sig.md
     - Reference:
-        - Command line options: Reference/CLI-Syntax.md
+        - Quorum Key Manager command line:
+            - Options: Reference/CLI/CLI-Syntax.md
+            - Subcommands: Reference/CLI/CLI-Subcommands.md
         - REST API methods: Reference/Rest.md
         - RBAC permissions: Reference/RBAC-Permissions.md
 
@@ -116,3 +119,4 @@ plugins:
         # you can't use an already redirected path as an old_path.
         # new_path can be a file inside the docs/ folder or any URL (http://...)
         # Reference/EthSigner-CLI.md: Reference/CLI/CLI-Syntax.md
+        Reference/CLI-Syntax.md: Reference/CLI/CLI-Syntax.md

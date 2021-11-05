@@ -39,7 +39,7 @@ You can define multiple manifests in one manifest file, each separated by a dash
           addr: http://tessera1:9080
     ```
 
-Specify the path to the manifest file or to a directory with several manifest files using the [`--manifest-path`](../../Reference/CLI-Syntax.md#manifest-path)
+Specify the path to the manifest file or to a directory with several manifest files using the [`--manifest-path`](../../Reference/CLI/CLI-Syntax.md#manifest-path)
 command line option on QKM startup.
 You can alternatively use the `MANIFEST_PATH` environment variable.
 
