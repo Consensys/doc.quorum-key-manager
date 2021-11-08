@@ -94,7 +94,7 @@ Use the following fields to configure one or more [Ethereum stores](../../Concep
 - `name`: *string* - name of the store
 - `alowedTenants`: *array* of *strings* - (optional) list of allowed tenants for this store when using
   [resource-based access control](../../Concepts/Authorization.md#resource-based-access-control)
-- `specs`: *object* - configuration object containing any valid `keystore` (`AwsKeys`, `AzureKeys`, or `HashicorpKeys`),
+- `specs`: *object* - configuration object containing any valid `keystore` (`AKVKeys`, `AWSKeys`, `HashicorpKeys`, `LocalKeys`),
   and the `specs` fields for that key store, as shown in the following example
 
 !!! Example "Example Ethereum store manifest file"
