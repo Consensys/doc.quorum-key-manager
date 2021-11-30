@@ -78,6 +78,7 @@ nav:
             - Subcommands: Reference/CLI/CLI-Subcommands.md
         - REST API methods: Reference/Rest.md
         - RBAC permissions: Reference/RBAC-Permissions.md
+        - Security disclosure: Reference/Responsible-Disclosure.md
 
 markdown_extensions:
   - toc:
