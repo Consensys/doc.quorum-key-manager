@@ -99,7 +99,7 @@ It uses a QKM instance on top of a Kubernetes cluster with an AWS KMS as key sto
 
 1. Test that everything worked:
 
-    - Check that the Infura backend has recorded your action with `<YOUR_PROJECT_ID>`.
+    - Check that Infura has recorded your action with `<YOUR_PROJECT_ID>`.
     - Check that the transaction has been mined.
       You should be able to view it on [Etherscan](https://etherscan.io/).
 
