@@ -33,7 +33,7 @@ It uses a QKM instance on top of a Kubernetes cluster with an AWS KMS as key sto
     https://rinkeby.infura.io/v3/<YOUR_PROJECT_ID>
     ```
 
-1. Start QKM with the [helmfile chart](https://github.com/ConsenSys/quorum-key-manager-kubernetes) specifying a manifest
+1. Start QKM with the [Helmfile chart](https://github.com/ConsenSys/quorum-key-manager-kubernetes) specifying a manifest
    file with the following content:
 
     ```yml
