@@ -164,3 +164,5 @@ This should give you an Ethereum account with a new address.
     has been properly signed and relayed.
 
     ![Etherscan message](../Images/EtherscanMessage.png)
+
+You can find more information about sending meta-transactions in the [ITX samples repository](https://github.com/INFURA/demo-eth-tx/tree/master/infura-transactions).
