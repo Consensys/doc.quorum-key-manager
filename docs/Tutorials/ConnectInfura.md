@@ -101,10 +101,7 @@ It uses a QKM instance on top of a Kubernetes cluster with an AWS KMS as key sto
 
     - Check that Infura has recorded your action with `<YOUR_PROJECT_ID>`.
     - Check that the transaction has been mined.
-      You should be able to view it on [Etherscan](https://etherscan.io/).
-
-    The [smart contract used in this example](https://rinkeby.etherscan.io/address/0x015C7C7A7D65bbdb117C573007219107BD7486f9#code)
-    is available on Etherscan.
+      You should be able to view it on Etherscan.
 
 ## Next steps
 

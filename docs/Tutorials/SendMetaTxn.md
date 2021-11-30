@@ -17,7 +17,7 @@ This should give you an Ethereum account with a new address.
 
 1. Fund your Ethereum account.
    For example, you can go to the [Rinkeby faucet](https://www.rinkeby.io/#faucet) and follow the instructions there.
-   You can use [Etherscan](https://etherscan.io/) to check that the faucet gave you ETH.
+   You can use Etherscan to check that the faucet gave you ETH.
 
 1. Deposit ETH into the Infura deposit contract using QKM `infura-node`.
    The following example uses the sample deposit contract `0x015C7C7A7D65bbdb117C573007219107BD7486f9`:
@@ -52,7 +52,7 @@ This should give you an Ethereum account with a new address.
         ```
 
     The response should yield the transaction hash for the successful deposit.
-    You can use [Etherscan](https://etherscan.io/) to check that the deposit went through:
+    You can use Etherscan to check that the deposit went through:
 
     ![Etherscan deposit](../Images/EtherscanDeposit.png)
 
