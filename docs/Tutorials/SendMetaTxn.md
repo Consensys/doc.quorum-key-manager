@@ -57,7 +57,7 @@ This should give you an Ethereum account with a new address.
     ![Etherscan deposit](../Images/EtherscanDeposit.png)
 
 1. Build a message to be sent to a test contract.
-   In this example, the message is `Hello world!, 6210 was here`, which translates to the following Ethereum message:
+   In this example, the message is `Hello world!, 6l20 was here`, which translates to the following Ethereum message:
 
     ```text
     0xf15da7290000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001b48656c6c6f20776f726c64212c20366c32302077617320686572650000000000
