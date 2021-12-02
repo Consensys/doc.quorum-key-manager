@@ -6,7 +6,7 @@ description: Connect to an Infura endpoint
 
 This tutorial walks you through connecting Quorum Key Manager (QKM) to an Infura endpoint.
 
-This tutorial connects to Infura to allow a QKM-managed account to interact with a smart contract on the Rinkeby network.
+This tutorial demonstrates connecting to Infura to allow a QKM-managed account to interact with a smart contract on the Rinkeby network.
 It uses a QKM instance on top of a Kubernetes cluster with an AWS KMS as key storage.
 
 ## Prerequisites
@@ -87,7 +87,7 @@ It uses a QKM instance on top of a Kubernetes cluster with an AWS KMS as key sto
         }'
     ```
 
-    The response should yield an Ethereum account address.
+    The response yields an Ethereum account address.
 
 1. Send JSON-RPC-based transactions to the Infura node created in step 1 using the Ethereum account created in step 5.
    Change `<MY_ETH_ACCOUNT_ADDRESS>` to the response address from the previous step, and the `localhost` target according
@@ -101,7 +101,7 @@ It uses a QKM instance on top of a Kubernetes cluster with an AWS KMS as key sto
 
     - Check that Infura has recorded your action with `<YOUR_PROJECT_ID>`.
     - Check that the transaction has been mined.
-      You should be able to view it on Etherscan.
+      You can view it on Etherscan.
 
 ## Next steps
 

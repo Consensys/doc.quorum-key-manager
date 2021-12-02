@@ -11,7 +11,7 @@ This tutorial is an extension of the [Connect to an Infura endpoint tutorial](Co
 ## Prerequisites
 
 Follow steps 1 to 5 in the [Connect to an Infura endpoint tutorial](ConnectInfura.md).
-This should give you an Ethereum account with a new address.
+This gives you an Ethereum account with a new address.
 
 ## Steps
 
@@ -51,7 +51,7 @@ This should give you an Ethereum account with a new address.
         }
         ```
 
-    The response should yield the transaction hash for the successful deposit.
+    The response yields the transaction hash for the successful deposit.
     You can use Etherscan to check that the deposit went through:
 
     ![Etherscan deposit](../Images/EtherscanDeposit.png)
@@ -80,7 +80,7 @@ This should give you an Ethereum account with a new address.
         }'
     ```
 
-    This should give you a valid signature, such as:
+    This gives you a valid signature, such as:
 
     ```text
     0xd4a7151261d815cd2720632b9e9949fd141e5059321bb8f23e621a944dd1081533acef9d1a318b3b60c2815385ba7e3ca59adee6490113c5a71913735acbeb8b1c
