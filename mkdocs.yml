@@ -72,7 +72,7 @@ nav:
     - Tutorials:
         - Connect to the JSON-RPC node proxy: Tutorials/JsonRPCProxy.md
         - Sign with EDDSA and BN254: Tutorials/EddsaBN254Sig.md
-        - Connect to Infura: Tutorials/ConnectInfura.md
+        - Connect to an Infura endpoint: Tutorials/ConnectInfura.md
         - Send a meta-transaction: Tutorials/SendMetaTxn.md
     - Reference:
         - Quorum Key Manager command line:
