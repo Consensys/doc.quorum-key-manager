@@ -54,7 +54,7 @@ nav:
         - Build from source: Get-Started/Build-From-Source.md
     - How to:
         - Authenticate user requests:
-            - Use OpenID Connect: HowTo/Authenticate/OIDC.md
+            - Use OAuth 2.0: HowTo/Authenticate/OAuth2.md
             - Use TLS: HowTo/Authenticate/TLS.md
             - Use API keys: HowTo/Authenticate/API-Key.md
         - Use a manifest file:
@@ -123,3 +123,4 @@ plugins:
         # new_path can be a file inside the docs/ folder or any URL (http://...)
         # Reference/EthSigner-CLI.md: Reference/CLI/CLI-Syntax.md
         Reference/CLI-Syntax.md: Reference/CLI/CLI-Syntax.md
+        HowTo/Authenticate/OIDC.md: HowTo/Authenticate/OAuth2.md

@@ -9,7 +9,7 @@ This is optional but recommended.
 
 To authenticate to QKM, users must provide credentials in every request through one of the following methods:
 
-- [OIDC](../HowTo/Authenticate/OIDC.md) - OpenID Connect standard using JSON Web Tokens
+- [OAuth 2.0](../HowTo/Authenticate/OAuth2.md) - OAuth 2.0 standard using JSON Web Tokens
 - [TLS](../HowTo/Authenticate/TLS.md) - Client TLS authentication
 - [API key](../HowTo/Authenticate/API-Key.md) - Set of keys defined in a CSV file and loaded at startup
 
