@@ -2,7 +2,7 @@
 Description: How to sign a meta-transaction with QKM and send to Infura ITX
 ---
 
-# Send a meta-transaction
+# Send an Infura ITX meta-transaction
 
 This tutorial walks you through signing a meta-transaction with Quorum Key Manager (QKM) and sending it to Infura
 Transactions (ITX).
