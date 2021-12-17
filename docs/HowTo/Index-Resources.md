@@ -31,16 +31,16 @@ apply to your local database.
 
 ## As environment variables
 
-You can specify the [same options](#on-the-command-line) as environment variables.
+You can specify the [same options](#on-the-command-line) as environment variables. Using:
+
+- Manifest file by using the [`--manifest-path`](../Reference/CLI/CLI-Syntax.md#manifest-path)
+- Database connection settings, such as [`--db-database`](../Reference/CLI/CLI-Syntax.md#db-database)
+- Environment variable `STORE_NAME` with the identifier of the store to index
 
 !!! example "Indexing keys from `hashicorp-keys` as environment variables"
 
     ```text
-    MANIFEST_PATH="/config/default.yml"
-    STORE_NAME="hashicorp-keys"
-    DB_DATABASE="postgres"
-    DB_HOST=127.0.0.1
-    DB_PORT=6174
+        STORE_NAME="hashicorp-keys"
     ```
 
     ```bash

@@ -40,99 +40,6 @@ You can specify QKM options:
 
 When using [API key authentication](../../HowTo/Authenticate/API-Key.md), path to the API key CSV file.
 
-### `auth-oidc-ca-cert`
-
-=== "Syntax"
-
-    ```bash
-    --auth-oidc-ca-cert=<FILE>
-    ```
-
-=== "Example"
-
-    ```bash
-    --auth-oidc-ca-cert=ca.key
-    ```
-
-=== "Environment variable"
-
-    ```bash
-    AUTH_OIDC_CA_CERT="ca.key"
-    ```
-
-When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), path to the certificate authority (CA) key for
-the OpenID server.
-You must use this option with [`--auth-oidc-issuer-url`](#auth-oidc-issuer-url).
-
-### `auth-oidc-claim-permissions`
-
-=== "Syntax"
-
-    ```bash
-    --auth-oidc-claim-permissions=<STRING>
-    ```
-
-=== "Example"
-
-    ```bash
-    --auth-oidc-claim-permissions="scope"
-    ```
-
-=== "Environment variable"
-
-    ```bash
-    AUTH_OIDC_CLAIM_PERMISSIONS="scope"
-    ```
-
-When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), claim from which to extract [permissions](../RBAC-Permissions.md).
-The default is the standard scope `scope`.
-
-### `auth-oidc-claim-roles`
-
-=== "Syntax"
-
-    ```bash
-    --auth-oidc-claim-roles=<STRING>
-    ```
-
-=== "Example"
-
-    ```bash
-    --auth-oidc-claim-roles="qkm.roles"
-    ```
-
-=== "Environment variable"
-
-    ```bash
-    AUTH_OIDC_CLAIM_ROLES="qkm.roles"
-    ```
-
-When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), claim from which to extract roles.
-The default is `qkm.roles`.
-
-### `auth-oidc-claim-username`
-
-=== "Syntax"
-
-    ```bash
-    --auth-oidc-claim-username=<STRING>
-    ```
-
-=== "Example"
-
-    ```bash
-    --auth-oidc-claim-username="sub"
-    ```
-
-=== "Environment variable"
-
-    ```bash
-    AUTH_OIDC_CLAIM_USERNAME="sub"
-    ```
-
-When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), claim from which to extract the username.
-The default is the standard claim `sub`.
-
 ### `auth-oidc-issuer-url`
 
 === "Syntax"
@@ -155,6 +62,30 @@ The default is the standard claim `sub`.
 
 When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), URL of the OpenID Connect server.
 You must use this option with [`--auth-oidc-ca-cert`](#auth-oidc-ca-cert).
+
+### `auth-oidc-audience`
+
+=== "Syntax"
+
+    ```bash
+    --auth-oidc-audience=<AUDIENCE>
+    ```
+
+=== "Example"
+
+    ```bash
+    --auth-oidc-audience=https://quorum-key-manager.eu.auth0.com
+    ```
+
+=== "Environment variable"
+
+    ```bash
+    AUTH_OIDC_AUDIENCE="https://quorum-key-manager.eu.auth0.com"
+    ```
+
+When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), expected audience ("aud" field) of access tokens.
+You must use this option with [`--auth-oidc-issuer-url`](#auth-oidc-issuer-url).
+
 
 ### `auth-tls-ca`
 

@@ -18,19 +18,18 @@ You can define multiple manifests in one manifest file, each separated by a dash
 
     ```yaml
     # Hashicorp secret store manifest
-    - kind: HashicorpSecrets
-      version: 0.0.1
+    - kind: Store
+      type: secret
       name: hashicorp-secrets
       specs:
-        mountPoint: secret
+        mount_point: secret
         address: http://hashicorp:8200
-        tokenPath: path/to/token_file
+        token_path: path/to/token_file
         token: YOUR_TOKEN
         namespace: user1_space
 
     # GoQuorum node manifest
     - kind: Node
-      version: 0.0.0
       name: goquorum-node
       specs:
         rpc:

@@ -41,9 +41,11 @@ QKM currently has the following resources:
 | Secret             | A key-value element stored in a secure vault system.                |
 | Key                | A cryptographic key.                                                |
 | Ethereum account   | A cryptographic key allowing interaction with the Ethereum network. |
-| [Store](Stores.md) | A set of secrets, keys, or Ethereum accounts.                       |
+| [Vault](Stores.md#Vault) | Vault Client connector use to persist resources remotely.                       |
+| [Store](Stores.md) | A storage space for a set of secrets, keys, or Ethereum accounts.                       |
 | [Node](Nodes.md)   | A representation of an underlying blockchain node.                  |
 | Alias              | A representation of an external public key. For example, a [Tessera](https://docs.tessera.consensys.net/en/stable/) address. |
+| Registry           | A storage space for clarifying a set of alias                                                                                |
 
 ### Tenant
 
