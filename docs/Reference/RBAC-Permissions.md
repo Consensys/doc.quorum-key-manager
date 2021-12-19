@@ -49,6 +49,6 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 
 | Name             | Description                            | Allowed endpoints                    |
 | :--------------- | :------------------------------------- | :----------------------------------- |
-| `read:alias`   | Allows reading alias over registries | Get, list         |
-| `write:alias`  | Allows creating aliases              | Create, update    |
-| `delete:alias` | Allows deleting aliases              | Delete            |
+| `read:alias`     | Allows reading aliases over registries | Get, list                            |
+| `write:alias`    | Allows creating aliases                | Create, update                       |
+| `delete:alias`   | Allows deleting aliases                | Delete                               |

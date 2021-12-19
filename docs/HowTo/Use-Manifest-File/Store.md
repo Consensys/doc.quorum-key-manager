@@ -8,6 +8,7 @@ You can define a [store](../../Concepts/Stores.md) in a Quorum Key Manager (QKM)
 
 QKM supports the following store interfaces:
 
+- [Vault](#vault)
 - [Secret store](#secret-store)
 - [Key store](#key-store)
 - [Ethereum store](#ethereum-store)

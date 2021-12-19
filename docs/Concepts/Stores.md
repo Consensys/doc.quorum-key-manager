@@ -12,13 +12,15 @@ Other QKM components use the store manager to access stores and perform crypto-o
 
 QKM defines the following store interfaces:
 
+- [Vault](#vault)
 - [Secret store](#secret-store)
 - [Key store](#key-store)
 - [Ethereum store](#ethereum-store)
 
 ## Vault
 
-A vault defines the user credentials required to access to the remote storage, such as HashiCorp Vault, Azure Key Vault, or AWS KMS.
+A vault defines the user credentials required to access secure system storage, such as HashiCorp Vault, Azure Key Vault, or
+AWS KMS.
 
 ## Secret store
 
@@ -57,7 +59,7 @@ Use the [`/keys`](https://consensys.github.io/quorum-key-manager/#tag/Keys) REST
 
 An Ethereum store manages Ethereum accounts and performs Ethereum-related crypto-operations (for example, signing transactions).
 
-An Ethereum store can generate and import accounts but does not allow to expose the private key of any account.
+An Ethereum store can generate and import accounts but does not expose the private key of any account.
 
 You can implement an Ethereum store based on an underlying key store to perform signing, while the account store is
 responsible for performing Ethereum-specific processing, formatting, and encoding.
