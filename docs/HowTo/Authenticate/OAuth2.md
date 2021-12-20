@@ -19,7 +19,6 @@ You can set the following options at QKM runtime to configure OAuth 2.0 authenti
 - [`--auth-oidc-issuer-url`](../../Reference/CLI/CLI-Syntax.md#auth-oidc-issuer-url) - URL of the OpenID Connect server.
 - [`--auth-oidc-audience`](../../Reference/CLI/CLI-Syntax.md#auth-oidc-audience) - Expected audience in access tokens.
 
-
 !!! example "Starting Quorum Key Manager with OAuth 2.0 authentication"
 
     ```bash

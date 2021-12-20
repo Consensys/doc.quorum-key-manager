@@ -31,11 +31,11 @@ apply to your local database.
 
 ## As environment variables
 
-You can specify the [same options](#on-the-command-line) as environment variables. Using:
+You can index resources using environment variables by specifying:
 
-- Manifest file by using the [`--manifest-path`](../Reference/CLI/CLI-Syntax.md#manifest-path)
-- Database connection settings, such as [`--db-database`](../Reference/CLI/CLI-Syntax.md#db-database)
-- Environment variable `SYNC_STORE_NAME` with the identifier of the store to index
+- The manifest file by using the `MANIFEST_PATH` environment variable
+- The identifier of the store to index using the `SYNC_STORE_NAME` environment variable
+- Optional database connection settings, such as [`DB_DATABASE`](../Reference/CLI/CLI-Syntax.md#db-database)
 
 !!! example "Indexing keys from `hashicorp-keys` as environment variables"
 

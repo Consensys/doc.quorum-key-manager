@@ -76,7 +76,6 @@ If using an `AWSKeys` or `AWSSecrets` store:
 - `region`: *string* - AWS region
 - `debug`: *boolean* - indicates whether to enable debugging
 
-
 ## Secret store
 
 Use the following fields to configure one or more [secret stores](../../Concepts/Stores.md#secret-store):
@@ -102,6 +101,7 @@ Use the following fields to configure one or more [secret stores](../../Concepts
 ## Key store
 
 Use the following fields to configure one or more [key stores](../../Concepts/Stores.md#key-store):
+
 - `kind`: *string* - Store
 - `type`: *string* - key
 - `name`: *string* - name of the key store
@@ -132,12 +132,11 @@ Use the following fields to configure one or more [key stores](../../Concepts/St
 Use the following fields to configure one or more [Ethereum stores](../../Concepts/Stores.md#ethereum-store):
 
 - `kind`: *string* - Store
-- `type`: *string* - ethereum
-- `name`: *string* - name of the ethereum store
+- `type`: *string* - Ethereum
+- `name`: *string* - name of the Ethereum store
 - `allowed_tenants`: *array* of *strings* - (optional) list of allowed tenants for this store when using
   [resource-based access control](../../Concepts/Authorization.md#resource-based-access-control)
 - `specs`: *object* - [configuration object to selected key store](#vault-configuration).
-
 
 !!! Example "Example Ethereum store manifest file"
 
@@ -149,4 +148,3 @@ Use the following fields to configure one or more [Ethereum stores](../../Concep
       specs:
         key_store: hashicorp-keys
     ```
-

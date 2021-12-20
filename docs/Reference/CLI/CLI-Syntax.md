@@ -83,9 +83,8 @@ You must use this option with [`--auth-oidc-ca-cert`](#auth-oidc-ca-cert).
     AUTH_OIDC_AUDIENCE="https://quorum-key-manager.eu.auth0.com"
     ```
 
-When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), expected audience ("aud" field) of access tokens.
+When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), expected audience (`aud` field) of access tokens.
 You must use this option with [`--auth-oidc-issuer-url`](#auth-oidc-issuer-url).
-
 
 ### `auth-tls-ca`
 
