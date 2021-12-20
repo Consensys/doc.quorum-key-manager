@@ -40,21 +40,28 @@ It uses a QKM instance on top of a Kubernetes cluster with an AWS KMS as key sto
     # Infura node manifest
     - kind: Node
       name: infura-node
-      version: 0.0.1
       specs:
         rpc:
           addr: https://rinkeby.infura.io/v3/<YOUR_PROJECT_ID>
 
     # Ethereum store manifest backed by an AWS keystore
-    - kind: Ethereum
-      version: 0.0.1
+    - kind: Vault
+      type: aws
+      name: aws-europe
+      specs:
+        access_id: <YOUR_KMS_ACCOUNT_ACCESS_ID>
+        secret_key: <YOUR_KMS_ACCOUNT_SECRET>
+        region: <YOUR_KMS_ACCOUNT_REGION>
+    - kind: Store
+      type: key
+      name: aws-keys
+      specs:
+        vault: aws-europe
+    - kind: Store
+      type: ethereum
       name: eth-accounts
       specs:
-        keystore: AWSKeys
-          specs:
-            accessID: <YOUR_KMS_ACCOUNT_ACCESS_ID>
-            secretKey: <YOUR_KMS_ACCOUNT_SECRET>
-            region: <YOUR_KMS_ACCOUNT_REGION>
+        key_store: aws-keys
     ```
 
 1. You can connect QKM to Infura using one of the following methods:

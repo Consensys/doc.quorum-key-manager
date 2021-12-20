@@ -19,7 +19,7 @@ when starting QKM.
 
 The API key file is a CSV file with four columns:
 
-- sha256(api-key)
+- sha256({apiKey})
 - username and optional [tenant](../../Concepts/Authorization.md#tenant)
 - [permissions](../../Reference/RBAC-Permissions.md)
 - [roles](../../Concepts/Authorization.md#role)
@@ -29,8 +29,8 @@ Each CSV line must be a unique API key and all API keys must be in UUID V4 forma
 !!! example "Example API key file"
 
     ```
-    sha256(apiKey1),tenant1|username1,"*:secret,*:keys","role-admin"
-    sha256(apiKey2),username2,"read:*","role-guest"
+    sha256({apiKey1}),tenant1|username1,"*:secret,*:keys","role-admin"
+    sha256({apiKey2}),username2,"read:*","role-guest"
     ```
 
 To extract an API key, QKM uses the standard [HTTP basic authentication](https://swagger.io/docs/specification/authentication/basic-authentication/)
@@ -39,7 +39,7 @@ scheme with a blank username and the API key as the password:
 === "Syntax"
 
     ```
-    Authorization: Basic <base64(:apiKey)>
+    Authorization: Basic <base64({apiKey})>
     ```
 
 === "Example"

@@ -4,7 +4,7 @@ description: Nodes concept page
 
 # Nodes
 
-A node is a Quorum Key Manager (QKM) component that interfaces with underlying node endpoints (such as RPC nodes and Tessera nodes).
+A node is a Quorum Key Manager (QKM) component that interfaces with underlying node endpoints (such as Ethereum RPC nodes and Tessera nodes).
 
 You can configure a node using a [node manifest](../HowTo/Use-Manifest-File/Node.md), which
 includes the configuration to [connect to the JSON-RPC node proxy](../Tutorials/JsonRPCProxy.md).

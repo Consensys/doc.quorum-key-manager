@@ -44,3 +44,11 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 | `set:secret`     | Allows creating secrets                | Set, update                          |
 | `delete:secret`  | Allows soft-deleting secrets           | Delete, restore                      |
 | `destroy:secret` | Allows permanently deleting secrets    | Delete, restore, destroy             |
+
+## Alias
+
+| Name             | Description                            | Allowed endpoints                    |
+| :--------------- | :------------------------------------- | :----------------------------------- |
+| `read:alias`     | Allows reading aliases over registries | Get, list                            |
+| `write:alias`    | Allows creating aliases                | Create, update                       |
+| `delete:alias`   | Allows deleting aliases                | Delete                               |

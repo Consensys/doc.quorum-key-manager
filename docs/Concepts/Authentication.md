@@ -10,8 +10,8 @@ This is optional but recommended.
 To authenticate to QKM, users must provide credentials in every request through one of the following methods:
 
 - [OAuth 2.0](../HowTo/Authenticate/OAuth2.md) - OAuth 2.0 standard using JSON Web Tokens
-- [TLS](../HowTo/Authenticate/TLS.md) - Client TLS authentication
-- [API key](../HowTo/Authenticate/API-Key.md) - Set of keys defined in a CSV file and loaded at startup
+- [TLS](../HowTo/Authenticate/TLS.md) - Client TLS mutual authentication
+- [API key](../HowTo/Authenticate/API-Key.md) - Set of static authorization keys defined in a CSV file and loaded at startup
 
 The authentication process consists of challenging incoming request credentials.
 If credentials are valid, QKM extracts user information and attaches it to the request context.
