@@ -35,12 +35,13 @@ You can specify the [same options](#on-the-command-line) as environment variable
 
 - Manifest file by using the [`--manifest-path`](../Reference/CLI/CLI-Syntax.md#manifest-path)
 - Database connection settings, such as [`--db-database`](../Reference/CLI/CLI-Syntax.md#db-database)
-- Environment variable `STORE_NAME` with the identifier of the store to index
+- Environment variable `SYNC_STORE_NAME` with the identifier of the store to index
 
 !!! example "Indexing keys from `hashicorp-keys` as environment variables"
 
     ```text
-        STORE_NAME="hashicorp-keys"
+        MANIFEST_PATH="/config/default.yml"
+        SYNC_STORE_NAME="hashicorp-keys"
     ```
 
     ```bash
