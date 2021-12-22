@@ -81,7 +81,7 @@ nav:
         - REST API methods: Reference/Rest.md
         - RBAC permissions: Reference/RBAC-Permissions.md
         - Security disclosure: Reference/Responsible-Disclosure.md
-
+        - Release types: Reference/Release-Types.md
 markdown_extensions:
   - toc:
       permalink: 
