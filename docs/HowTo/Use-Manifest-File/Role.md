@@ -20,21 +20,21 @@ Use the following fields to configure one or more roles:
     - kind: Role
       name: anonymous
       specs:
-        permission:
+        permissions:
           - "read:nodes"
 
     # Guest role manifest
     - kind: Role
       name: guest
       specs:
-        permission:
+        permissions:
           - "read:*"
 
     # Signer role manifest
     - kind: Role
       name: signer
       specs:
-        permission:
+        permissions:
           - "read:*"
           - "sign:keys"
           - "sign:ethereum"
@@ -43,6 +43,6 @@ Use the following fields to configure one or more roles:
     - kind: Role
       name: admin
       specs:
-        permission:
+        permissions:
           - "*:*"
     ```
