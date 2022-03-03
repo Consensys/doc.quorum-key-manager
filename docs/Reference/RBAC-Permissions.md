@@ -10,40 +10,36 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 ## Ethereum accounts
 
 | Name               | Description                                      | Allowed endpoints                    |
-| :----------------- | :----------------------------------------------- | :----------------------------------- |
+|-:------------------|-:------------------------------------------------|-:------------------------------------|
 | `read:ethereum`    | Allows reading operations over Ethereum accounts | Get, list, get deleted, list deleted |
-| `create:ethereum`  | Allows creating Ethereum accounts                | Create, import, update               |
+| `write:ethereum`   | Allows creating Ethereum accounts                | Create, import, update               |
 | `delete:ethereum`  | Allows soft-deleting Ethereum accounts           | Delete, restore                      |
 | `destroy:ethereum` | Allows permanently deleting Ethereum accounts    | Delete, restore, destroy             |
 | `sign:ethereum`    | Allows signing and verifying signatures          | *All sign endpoints*, EC recover     |
 | `encrypt:ethereum` | Allows encryption and decryption                 | Encrypt, decrypt                     |
 
+
 ## Keys
 
 | Name          | Description                             | Allowed endpoints                    |
-| :------------ | :-------------------------------------- | :----------------------------------- |
+|-:-------------|-:---------------------------------------|-:------------------------------------|
 | `read:key`    | Allows reading operations over keys     | Get, list, get deleted, list deleted |
-| `create:key`  | Allows creating keys                    | Create, import, update               |
+| `write:key`   | Allows creating keys                    | Create, import, update               |
 | `delete:key`  | Allows soft-deleting keys               | Delete, restore                      |
 | `destroy:key` | Allows permanently deleting keys        | Delete, restore, destroy             |
 | `sign:key`    | Allows signing and verifying signatures | Sign                                 |
 | `encrypt:key` | Allows encryption and decryption        | Encrypt, decrypt                     |
-
-## Nodes
-
-| Name          | Description                          | Allowed endpoints                    |
-| :------------ | :----------------------------------- | :----------------------------------- |
-| `read:nodes`  | Allows reading operations over nodes | Get, list, get deleted, list deleted |
-| `proxy:nodes` | Allows creating nodes                | Create, update                       |
+                 |
 
 ## Secrets
 
 | Name             | Description                            | Allowed endpoints                    |
-| :--------------- | :------------------------------------- | :----------------------------------- |
+|-:----------------|-:--------------------------------------|-:------------------------------------|
 | `read:secret`    | Allows reading operations over secrets | Get, list, get deleted, list deleted |
-| `set:secret`     | Allows creating secrets                | Set, update                          |
+| `write:secret`   | Allows creating secrets                | Set, update                          |
 | `delete:secret`  | Allows soft-deleting secrets           | Delete, restore                      |
 | `destroy:secret` | Allows permanently deleting secrets    | Delete, restore, destroy             |
+
 
 ## Alias
 
@@ -52,3 +48,9 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 | `read:alias`     | Allows reading aliases over registries | Get, list                            |
 | `write:alias`    | Allows creating aliases                | Create, update                       |
 | `delete:alias`   | Allows deleting aliases                | Delete                               |
+
+## Nodes
+
+| Name          | Description                        |
+|-:-------------|-:----------------------------------|
+| `proxy:nodes` | Allows proxying traffic into nodes |

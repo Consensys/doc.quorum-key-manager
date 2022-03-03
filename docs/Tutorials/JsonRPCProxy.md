@@ -22,9 +22,9 @@ Key Manager (QKM) as remote and secure storage for your wallets.
     !!! example "Example manifest file"
 
         ```yaml
-        - kind: Ethereum
-          version: 0.0.1
-          name: eth-accounts
+        - kind: Vault
+          type: azure
+          name: akv-europe
           specs:
             keystore: AzureKeys
             specs:
@@ -33,9 +33,20 @@ Key Manager (QKM) as remote and secure storage for your wallets.
               clientID: <CLIENT-ID>
               clientSecret: <SECRET>
 
+        - kind: Store
+          type: key
+          name: akv-keys
+          specs:
+            vault: akv-europe
+
+        - kind: Store
+          type: ethereum
+          name: eth-accounts
+          specs:
+            key_store: akv-keys
+
         - kind: Node
           name: quorum-node
-          version: 0.0.0
           specs:
             rpc:
               addr: http://quorum1:8545
