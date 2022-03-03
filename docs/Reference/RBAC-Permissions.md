@@ -51,4 +51,4 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 
 | Name          | Description                        |
 |-:-------------|-:----------------------------------|
-| `proxy:nodes` | Allows to proxy traffic into nodes |
+| `proxy:nodes` | Allows you to proxy traffic into nodes |
