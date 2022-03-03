@@ -18,7 +18,6 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 | `sign:ethereum`    | Allows signing and verifying signatures          | *All sign endpoints*, EC recover     |
 | `encrypt:ethereum` | Allows encryption and decryption                 | Encrypt, decrypt                     |
 
-
 ## Keys
 
 | Name          | Description                             | Allowed endpoints                    |
@@ -40,7 +39,6 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 | `delete:secret`  | Allows soft-deleting secrets           | Delete, restore                      |
 | `destroy:secret` | Allows permanently deleting secrets    | Delete, restore, destroy             |
 
-
 ## Alias
 
 | Name             | Description                            | Allowed endpoints                    |
@@ -53,4 +51,4 @@ Each permission has a list of allowed [REST endpoints](Rest.md).
 
 | Name          | Description                        |
 |-:-------------|-:----------------------------------|
-| `proxy:nodes` | Allows proxying traffic into nodes |
+| `proxy:nodes` | Allows to proxy traffic into nodes |
