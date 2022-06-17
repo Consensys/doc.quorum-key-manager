@@ -22,7 +22,7 @@ QKM supports the following store interfaces:
 
 Use the following fields to configure one or more [vaults](../../Concepts/Stores.md#vault):
 
-- `kind`: *string* - vgault
+- `kind`: *string* - vault
 - `type`: *string* - supported vault types are `hashicorp`, `azure`, and `aws`
 - `name`: *string* - identifier of the vault
 - `allowed_tenants`: *array* of *strings* - (optional) list of allowed tenants for this store when using
