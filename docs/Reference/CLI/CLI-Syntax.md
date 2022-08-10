@@ -51,13 +51,13 @@ When using [API key authentication](../../HowTo/Authenticate/API-Key.md), path t
 === "Example"
 
     ```bash
-    --auth-oidc-issuer-url="https://quorum-key-manager.eu.auth0.com/.well-known/jwks.json"
+    --auth-oidc-issuer-url="https://quorum-key-manager.eu.auth0.com/"
     ```
 
 === "Environment variable"
 
     ```bash
-    AUTH_OIDC_ISSUER_URL="https://quorum-key-manager.eu.auth0.com/.well-known/jwks.json"
+    AUTH_OIDC_ISSUER_URL="https://quorum-key-manager.eu.auth0.com/"
     ```
 
 When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), URL of the OpenID Connect server.
