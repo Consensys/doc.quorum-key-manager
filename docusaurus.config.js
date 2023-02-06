@@ -224,13 +224,13 @@ const config = {
     [
       "@docusaurus/plugin-google-tag-manager",
       {
-        containerId: "GTM-",
+        containerId: "GTM-T925L76",
       },
     ],
     [
       "@docusaurus/plugin-google-gtag",
       {
-        trackingID: "G-",
+        trackingID: "G-503THPS8VM",
         anonymizeIP: true,
       },
     ],
