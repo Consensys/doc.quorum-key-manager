@@ -45,4 +45,4 @@ For tool changes:
 Make sure that:
 
 - [ ] You've [fixed any issues](https://consensys.net/docs/doctools/en/latest/contribute/fix-cicd-errors/) raised by the tests.
-- [ ] You've [previewed your changes on GitHub Pages](https://consensys.net/docs/doctools/en/latest/preview/new-system/#preview-on-github-pages)
+- [ ] You've previewed your changes on Vercel below.
