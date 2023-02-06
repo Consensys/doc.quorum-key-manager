@@ -1,15 +1,14 @@
 ---
 title: Quorum Key Manager
 description: Quorum Key Manager
+slug: overview
 ---
 
 # Quorum Key Manager
 
 ## What is Quorum Key Manager?
 
-Quorum Key Manager is an Ethereum account and key management service developed under the [BSL 1.1 license] and written in Go.
-Quorum Key Manager is a signing service that manages accounts, keys, and secrets for the entire Quorum stack, and supports the
-following vaults:
+Quorum Key Manager is an Ethereum account and key management service developed under the [BSL 1.1 license] and written in Go. Quorum Key Manager is a signing service that manages accounts, keys, and secrets for the entire Quorum stack, and supports the following vaults:
 
 - HashiCorp Vault
 - Azure Key Vault
@@ -43,6 +42,7 @@ Quorum Key Manager is compatible with GoQuorum, Hyperledger Besu, Tessera, and C
 - Supports secrets versioning.
 
 <!--links-->
+
 [BSL 1.1 license]: https://mariadb.com/bsl11/
 [typed data]: https://eips.ethereum.org/EIPS/eip-712
 [Ethereum messages]: https://eips.ethereum.org/EIPS/eip-191

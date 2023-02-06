@@ -1,21 +1,24 @@
 ---
+title: Use TLS
 description: How to authenticate QKM using TLS.
+sidebar_position: 2
 ---
 
 # Authenticate using TLS
 
 You can [authenticate](../../Concepts/Authentication.md#authentication) incoming Quorum Key Manager (QKM) requests using mutual TLS authentication.
 
-To use TLS mutual authentication, start QKM in SSL mode with the [`--https-enable`](../../Reference/CLI/CLI-Syntax.md#https-enable),
-[`--https-server-cert`](../../Reference/CLI/CLI-Syntax.md#https-server-cert), and [`--https-server-key`](../../Reference/CLI/CLI-Syntax.md#https-server-key)
-command line options, and specify a TLS certificate authority (CA) certificate with the [`--auth-tls-ca`](../../Reference/CLI/CLI-Syntax.md#auth-tls-ca)
-option.
+To use TLS mutual authentication, start QKM in SSL mode with the [`--https-enable`](../../Reference/CLI/CLI-Syntax.md#https-enable), [`--https-server-cert`](../../Reference/CLI/CLI-Syntax.md#https-server-cert), and [`--https-server-key`](../../Reference/CLI/CLI-Syntax.md#https-server-key) command line options, and specify a TLS certificate authority (CA) certificate with the [`--auth-tls-ca`](../../Reference/CLI/CLI-Syntax.md#auth-tls-ca) option.
 
-!!! example "Starting Quorum Key Manager with TLS authentication"
+:::info
 
-    ```bash
-    key-manager run --https-enable --https-server-cert=tls.crt --https-server-key=tls.key --auth-tls-ca=ca.crt --manifest-path=/config/default.yml
-    ```
+Starting Quorum Key Manager with TLS authentication
+
+```bash
+key-manager run --https-enable --https-server-cert=tls.crt --https-server-key=tls.key --auth-tls-ca=ca.crt --manifest-path=/config/default.yml
+```
+
+:::
 
 ## TLS certificate
 
@@ -31,8 +34,12 @@ QKM extracts the following user information from the subject field of the client
 
 You can use the `openssl` command line tool to generate a certificate signing request:
 
-!!! example "Example certificate signing request"
+:::info
 
-    ```bash
-    openssl req -new -key jbeda.pem -out jbeda-csr.pem -subj "/CN=auth0|alice/O=admin/OU=sign:eth1Account"
-    ```
+Example certificate signing request
+
+```bash
+openssl req -new -key jbeda.pem -out jbeda-csr.pem -subj "/CN=auth0|alice/O=admin/OU=sign:eth1Account"
+```
+
+:::

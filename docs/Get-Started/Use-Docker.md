@@ -1,5 +1,6 @@
 ---
 description: Run Quorum Key Manager from Docker image
+sidebar_position: 1
 ---
 
 # Run Quorum Key Manager from Docker image
@@ -11,9 +12,11 @@ Use the provided Docker image to run Quorum Key Manager (QKM) in a Docker contai
 - [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
 - MacOS or Linux
 
-    !!! Important
+  :::caution
 
-        The Docker image does not run on Windows.
+  The Docker image does not run on Windows.
+
+  :::
 
 ### Run Quorum Key Manager
 

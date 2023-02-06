@@ -1,5 +1,7 @@
 ---
+title: Options
 description: Quorum Key Manager command line interface reference
+sidebar_position: 1
 ---
 
 # Quorum Key Manager command line options
@@ -12,611 +14,694 @@ You can specify QKM options:
 
 - On the command line.
 
-    ```bash
-    key-manager run [OPTIONS]
-    ```
+  ```bash
+  key-manager run [OPTIONS]
+  ```
 
 - As environment variables.
 
 ### `auth-api-key-file`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --auth-api-key-file=<FILE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--auth-api-key-file=<FILE>
+```
 
-    ```bash
-    --auth-api-key-file=api_key_file.csv
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--auth-api-key-file=api_key_file.csv
+```
 
-    ```bash
-    AUTH_API_KEY_FILE="api_key_file.csv"
-    ```
+# Environment variable
+
+```bash
+AUTH_API_KEY_FILE="api_key_file.csv"
+```
+
+<!--/tabs-->
 
 When using [API key authentication](../../HowTo/Authenticate/API-Key.md), path to the API key CSV file.
 
 ### `auth-oidc-issuer-url`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --auth-oidc-issuer-url=<URL>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--auth-oidc-issuer-url=<URL>
+```
 
-    ```bash
-    --auth-oidc-issuer-url="https://quorum-key-manager.eu.auth0.com/"
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--auth-oidc-issuer-url="https://quorum-key-manager.eu.auth0.com/"
+```
 
-    ```bash
-    AUTH_OIDC_ISSUER_URL="https://quorum-key-manager.eu.auth0.com/"
-    ```
+# Environment variable
 
-When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), URL of the OpenID Connect server.
-You must use this option with [`--auth-oidc-ca-cert`](#auth-oidc-ca-cert).
+```bash
+AUTH_OIDC_ISSUER_URL="https://quorum-key-manager.eu.auth0.com/"
+```
+
+<!--/tabs-->
+
+When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), URL of the OpenID Connect server. You must use this option with [`--auth-oidc-ca-cert`](#auth-oidc-ca-cert).
 
 ### `auth-oidc-audience`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --auth-oidc-audience=<AUDIENCE>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--auth-oidc-audience=<AUDIENCE>
+```
 
-    ```bash
-    --auth-oidc-audience=https://quorum-key-manager.eu.auth0.com
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--auth-oidc-audience=https://quorum-key-manager.eu.auth0.com
+```
 
-    ```bash
-    AUTH_OIDC_AUDIENCE="https://quorum-key-manager.eu.auth0.com"
-    ```
+# Environment variable
 
-When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), expected audience (`aud` field) of access tokens.
-You must use this option with [`--auth-oidc-issuer-url`](#auth-oidc-issuer-url).
+```bash
+AUTH_OIDC_AUDIENCE="https://quorum-key-manager.eu.auth0.com"
+```
+
+<!--/tabs-->
+
+When using [OAuth 2.0 authentication](../../HowTo/Authenticate/OAuth2.md), expected audience (`aud` field) of access tokens. You must use this option with [`--auth-oidc-issuer-url`](#auth-oidc-issuer-url).
 
 ### `auth-tls-ca`
 
-=== "Syntax"
+<!--tabs-->
+
+# Syntax
 
     ```bash
     --auth-tls-ca=<FILE>
     ```
 
-=== "Example"
+# Example
 
     ```bash
     --auth-tls-ca=ca.crt
     ```
 
-=== "Environment variable"
+# Environment variable
 
     ```bash
     AUTH_TLS_CA="ca.crt"
     ```
 
-When using [TLS authentication](../../HowTo/Authenticate/TLS.md), path to the certificate authority (CA) certificate for
-the TLS server.
+<!--/tabs-->
+
+When using [TLS authentication](../../HowTo/Authenticate/TLS.md), path to the certificate authority (CA) certificate for the TLS server.
 
 ### `db-database`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-database=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-database=<STRING>
+```
 
-    ```bash
-    --db-database="postgres"
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-database="postgres"
+```
 
-    ```bash
-    DB_DATABASE="postgres"
-    ```
+# Environment variable
 
-Target database name.
-The default is `postgres`.
+```bash
+DB_DATABASE="postgres"
+```
+
+<!--/tabs-->
+
+Target database name. The default is `postgres`.
 
 ### `db-host`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-host=<HOST>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-host=<HOST>
+```
 
-    ```bash
-    --db-host=127.0.0.1
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-host=127.0.0.1
+```
 
-    ```bash
-    DB_HOST="127.0.0.1"
-    ```
+# Environment variable
 
-Database host.
-The default is `127.0.0.1`.
+```bash
+DB_HOST="127.0.0.1"
+```
+
+<!--/tabs-->
+
+Database host. The default is `127.0.0.1`.
 
 ### `db-keepalive`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-keepalive=<DURATION>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-keepalive=<DURATION>
+```
 
-    ```bash
-    --db-keepalive=1m0s
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-keepalive=1m0s
+```
 
-    ```bash
-    DB_KEEPALIVE="1m0s"
-    ```
+# Environment variable
 
-Number of seconds before the client sends a TCP `keepalive` message.
-The default is `1m0s`.
+```bash
+DB_KEEPALIVE="1m0s"
+```
+
+<!--/tabs-->
+
+Number of seconds before the client sends a TCP `keepalive` message. The default is `1m0s`.
 
 ### `db-password`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-password=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-password=<STRING>
+```
 
-    ```bash
-    --db-password="postgres"
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-password="postgres"
+```
 
-    ```bash
-    DB_PASSWORD="postgres"
-    ```
+# Environment variable
 
-Database user password.
-The default is `postgres`.
+```bash
+DB_PASSWORD="postgres"
+```
+
+<!--/tabs-->
+
+Database user password. The default is `postgres`.
 
 ### `db-pool-timeout`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-pool-timeout=<DURATION>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-pool-timeout=<DURATION>
+```
 
-    ```bash
-    --db-pool-timeout=30s
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-pool-timeout=30s
+```
 
-    ```bash
-    DB_POOL_TIMEOUT="30s"
-    ```
+# Environment variable
 
-Number of seconds the client waits for a free connection if all connections are busy.
-The default is `30s`.
+```bash
+DB_POOL_TIMEOUT="30s"
+```
+
+<!--/tabs-->
+
+Number of seconds the client waits for a free connection if all connections are busy. The default is `30s`.
 
 ### `db-poolsize`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-poolsize=<INTEGER>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-poolsize=<INTEGER>
+```
 
-    ```bash
-    --db-poolsize=20
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-poolsize=20
+```
 
-    ```bash
-    DB_POOLSIZE="20"
-    ```
+# Environment variable
+
+```bash
+DB_POOLSIZE="20"
+```
+
+<!--/tabs-->
 
 Maximum number of connections on the database.
 
 ### `db-port`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-port=<PORT>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-port=<PORT>
+```
 
-    ```bash
-    --db-port=6174
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-port=6174
+```
 
-    ```bash
-    DB_PORT="6174"
-    ```
+# Environment variable
 
-Database port.
-The default is `5432`.
+```bash
+DB_PORT="6174"
+```
+
+<!--/tabs-->
+
+Database port. The default is `5432`.
 
 ### `db-sslmode`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-sslmode=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-sslmode=<STRING>
+```
 
-    ```bash
-    --db-sslmode="require"
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-sslmode="require"
+```
 
-    ```bash
-    DB_SSLMODE="require"
-    ```
+# Environment variable
 
-TLS/SSL mode to connect to database (one of `require`, `disable`, `verify-ca`, and `verify-full`).
-The default is `disable`.
+```bash
+DB_SSLMODE="require"
+```
+
+<!--/tabs-->
+
+TLS/SSL mode to connect to database (one of `require`, `disable`, `verify-ca`, and `verify-full`). The default is `disable`.
 
 ### `db-tls-ca`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-tls-ca=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-tls-ca=<STRING>
+```
 
-    ```bash
-    --db-tls-ca=tls_ca.pem
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-tls-ca=tls_ca.pem
+```
 
-    ```bash
-    DB_TLS_CA="tls_ca.pem"
-    ```
+# Environment variable
+
+```bash
+DB_TLS_CA="tls_ca.pem"
+```
+
+<!--/tabs-->
 
 Path to TLS certificate authority (CA) in PEM format.
 
 ### `db-tls-cert`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-tls-cert=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-tls-cert=<STRING>
+```
 
-    ```bash
-    --db-tls-cert=tls_cert.pem
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-tls-cert=tls_cert.pem
+```
 
-    ```bash
-    DB_TLS_CERT="tls_cert.pem"
-    ```
+# Environment variable
+
+```bash
+DB_TLS_CERT="tls_cert.pem"
+```
+
+<!--/tabs-->
 
 Path to TLS certificate to connect to database in PEM format.
 
 ### `db-tls-key`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-tls-key=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-tls-key=<STRING>
+```
 
-    ```bash
-    --db-tls-key=tls_key.pem
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-tls-key=tls_key.pem
+```
 
-    ```bash
-    DB_TLS_KEY="tls_key.pem"
-    ```
+# Environment variable
+
+```bash
+DB_TLS_KEY="tls_key.pem"
+```
+
+<!--/tabs-->
 
 Path to TLS private key to connect to database in PEM format.
 
 ### `db-user`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --db-user=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--db-user=<STRING>
+```
 
-    ```bash
-    --db-user="postgres"
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--db-user="postgres"
+```
 
-    ```bash
-    DB_USER="postgres"
-    ```
+# Environment variable
 
-Database user.
-The default is `postgres`.
+```bash
+DB_USER="postgres"
+```
+
+<!--/tabs-->
+
+Database user. The default is `postgres`.
 
 ### `health-port`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --health-port=<PORT>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--health-port=<PORT>
+```
 
-    ```bash
-    --health-port=6174
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--health-port=6174
+```
 
-    ```bash
-    HEALTH_PORT="6174"
-    ```
+# Environment variable
 
-Port to expose Health HTTP service.
-The default is `8081`.
+```bash
+HEALTH_PORT="6174"
+```
+
+<!--/tabs-->
+
+Port to expose Health HTTP service. The default is `8081`.
 
 ### `help`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    -h, --help, [command] --help
-    ```
+# Syntax
+
+```bash
+-h, --help, [command] --help
+```
+
+<!--/tabs-->
 
 Print help information and exit, or if a command is specified, print more information about the command.
 
 ### `http-host`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --http-host=<HOST>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--http-host=<HOST>
+```
 
-    ```bash
-    --http-host=127.0.0.1
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--http-host=127.0.0.1
+```
 
-    ```bash
-    HTTP_HOST="127.0.0.1"
-    ```
+# Environment variable
+
+```bash
+HTTP_HOST="127.0.0.1"
+```
 
 Host to expose HTTP service.
 
 ### `http-port`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --http-port=<PORT>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--http-port=<PORT>
+```
 
-    ```bash
-    --http-port=6174
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--http-port=6174
+```
 
-    ```bash
-    HTTP_PORT="6174"
-    ```
+# Environment variable
 
-Port to expose HTTP service.
-The default is `8080`.
+```bash
+HTTP_PORT="6174"
+```
+
+Port to expose HTTP service. The default is `8080`.
 
 ### `https-enable`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --https-enable
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--https-enable
+```
 
-    ```bash
-    --https-enable
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--https-enable
+```
 
-    ```bash
-    HTTPS_ENABLE=true
-    ```
+# Environment variable
 
-Enable HTTPS server.
-This is required when using [TLS authentication](../../HowTo/Authenticate/TLS.md).
+```bash
+HTTPS_ENABLE=true
+```
+
+<!--/tabs-->
+
+Enable HTTPS server. This is required when using [TLS authentication](../../HowTo/Authenticate/TLS.md).
 
 ### `https-server-cert`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --https-server-cert=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--https-server-cert=<STRING>
+```
 
-    ```bash
-    --https-server-cert=tls.crt
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--https-server-cert=tls.crt
+```
 
-    ```bash
-    HTTPS_SERVER_CERT="tls.crt"
-    ```
+# Environment variable
 
-Path to TLS server certificate.
-This is required when using [TLS authentication](../../HowTo/Authenticate/TLS.md).
+```bash
+HTTPS_SERVER_CERT="tls.crt"
+```
+
+<!--/tabs-->
+
+Path to TLS server certificate. This is required when using [TLS authentication](../../HowTo/Authenticate/TLS.md).
 
 ### `https-server-key`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --https-server-key=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--https-server-key=<STRING>
+```
 
-    ```bash
-    --https-server-key=tls.key
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--https-server-key=tls.key
+```
 
-    ```bash
-    HTTPS_SERVER_KEY="tls.key"
-    ```
+# Environment variable
 
-Path to TLS server key.
-This is required when using [TLS authentication](../../HowTo/Authenticate/TLS.md).
+```bash
+HTTPS_SERVER_KEY="tls.key"
+```
+
+<!--/tabs-->
+
+Path to TLS server key. This is required when using [TLS authentication](../../HowTo/Authenticate/TLS.md).
 
 ### `log-format`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --log-format=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--log-format=<STRING>
+```
 
-    ```bash
-    --log-formatter="text"
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--log-formatter="text"
+```
 
-    ```bash
-    LOG_FORMATTER="text"
-    ```
+# Environment variable
 
-Log formatter.
-The options are `text` and `json`.
-The default is `text`.
+```bash
+LOG_FORMATTER="text"
+```
+
+<!--/tabs-->
+
+Log formatter. The options are `text` and `json`. The default is `text`.
 
 ### `log-level`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --log-level=<STRING>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--log-level=<STRING>
+```
 
-    ```bash
-    --log-level="debug"
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--log-level="debug"
+```
 
-    ```bash
-    LOG_LEVEL="debug"
-    ```
+# Environment variable
 
-Log level.
-The options are `debug`, `error`, `fatal`, `info`, `panic`, `trace`, and `warn`.
-The default is `info`.
+```bash
+LOG_LEVEL="debug"
+```
+
+<!--/tabs-->
+
+Log level. The options are `debug`, `error`, `fatal`, `info`, `panic`, `trace`, and `warn`. The default is `info`.
 
 ### `log-timestamp`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --log-timestamp[=<BOOLEAN>]
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--log-timestamp[=<BOOLEAN>]
+```
 
-    ```bash
-    --log-timestamp
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--log-timestamp
+```
 
-    ```bash
-    LOG_TIMESTAMP=true
-    ```
+# Environment variable
 
-Enables logging with timestamp (only in `text` format).
-The default is `true`.
+```bash
+LOG_TIMESTAMP=true
+```
+
+<!--/tabs-->
+
+Enables logging with timestamp (only in `text` format). The default is `true`.
 
 ### `manifest-path`
 
-=== "Syntax"
+<!--tabs-->
 
-    ```bash
-    --manifest-path=<PATH>
-    ```
+# Syntax
 
-=== "Example"
+```bash
+--manifest-path=<PATH>
+```
 
-    ```bash
-    --manifest-path=/config/default.yml
-    ```
+# Example
 
-=== "Environment variable"
+```bash
+--manifest-path=/config/default.yml
+```
 
-    ```bash
-    MANIFEST_PATH="/config/default.yml"
-    ```
+# Environment variable
+
+```bash
+MANIFEST_PATH="/config/default.yml"
+```
+
+<!--/tabs-->
 
 Path to [manifest file/folder](../../HowTo/Use-Manifest-File/Overview.md) to configure key manager stores and nodes.
