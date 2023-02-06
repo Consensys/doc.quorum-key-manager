@@ -1,17 +1,10 @@
 ---
-name: Documentation tool bug report
-about: Create a report to help us improve our documentation tools.
-title: ''
-
+name: Bug report
+about: Create a bug report.
+title: ""
+labels: Documentation
+assignees: Ezzahhh
 ---
-
-<!-- IMPORTANT: This is only for reporting documentation tool bugs.
-
-Report Quorum Key Manager software issues at https://github.com/consensys/quorum-key-manager.
-Report documentation content issues using the "Documentation content issue report" template.
-
-Before creating an issue, did you refresh your browser cache for the site?
--->
 
 ## Describe the bug
 
