@@ -325,7 +325,7 @@ Database port. The default is `5432`.
 # Environment variable
 
 ```bash
-DB_SSLMODE="require"
+DB_TLS_SSLMODE="require"
 ```
 
 <!--/tabs-->
